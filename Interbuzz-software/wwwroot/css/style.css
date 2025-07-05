@@ -442,3 +442,19 @@ footer {background:black;color: #ffffff;padding: 70px 0 30px;position: relative;
 @media (max-width: 768px) {
   .footer-section {margin-bottom: 40px;}
 }
+
+/*admin Login*/
+.admin-login-form {
+    padding: 10% 30%;
+}
+
+.admin-login-bg {
+    padding: 10%;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}

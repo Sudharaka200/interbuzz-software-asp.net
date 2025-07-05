@@ -7,8 +7,4 @@
     <RootNamespace>Interbuzz_software</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\Admin\" />
-  </ItemGroup>
-
 </Project>

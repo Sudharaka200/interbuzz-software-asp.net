@@ -1,0 +1,493 @@
+{
+  "Files": [
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Interbuzz-software.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Interbuzz-software.bundle.scp.css"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\1Group 20.png",
+      "PackagePath": "staticwebassets\\images\\1Group 20.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\1Group 201.png",
+      "PackagePath": "staticwebassets\\images\\1Group 201.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\Group 20.png",
+      "PackagePath": "staticwebassets\\images\\Group 20.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\Group 201.png",
+      "PackagePath": "staticwebassets\\images\\Group 201.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\Hero image.png",
+      "PackagePath": "staticwebassets\\images\\Hero image.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\ImageBanner.png",
+      "PackagePath": "staticwebassets\\images\\ImageBanner.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\LOGO_!50_100 1.png",
+      "PackagePath": "staticwebassets\\images\\LOGO_!50_100 1.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\Mask grou1p.png",
+      "PackagePath": "staticwebassets\\images\\Mask grou1p.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\Mask group.png",
+      "PackagePath": "staticwebassets\\images\\Mask group.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\Mask group2.png",
+      "PackagePath": "staticwebassets\\images\\Mask group2.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\Mask group21.png",
+      "PackagePath": "staticwebassets\\images\\Mask group21.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\Mask group22.png",
+      "PackagePath": "staticwebassets\\images\\Mask group22.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\Mask group23.png",
+      "PackagePath": "staticwebassets\\images\\Mask group23.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\Mask group3.png",
+      "PackagePath": "staticwebassets\\images\\Mask group3.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\Mask group4.png",
+      "PackagePath": "staticwebassets\\images\\Mask group4.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\Mask group5.png",
+      "PackagePath": "staticwebassets\\images\\Mask group5.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\Mask group6.png",
+      "PackagePath": "staticwebassets\\images\\Mask group6.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\Rectangle 11.png",
+      "PackagePath": "staticwebassets\\images\\Rectangle 11.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\Vector - Copy.png",
+      "PackagePath": "staticwebassets\\images\\Vector - Copy.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\Vector.png",
+      "PackagePath": "staticwebassets\\images\\Vector.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\Vector1.png",
+      "PackagePath": "staticwebassets\\images\\Vector1.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\Vector2.png",
+      "PackagePath": "staticwebassets\\images\\Vector2.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\blog-c-1.jpg",
+      "PackagePath": "staticwebassets\\images\\blog-c-1.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\blog-c-2.jpg",
+      "PackagePath": "staticwebassets\\images\\blog-c-2.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\blog-img1.png",
+      "PackagePath": "staticwebassets\\images\\blog-img1.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\blog-img2.png",
+      "PackagePath": "staticwebassets\\images\\blog-img2.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\blog-img3.png",
+      "PackagePath": "staticwebassets\\images\\blog-img3.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\blog-img4.png",
+      "PackagePath": "staticwebassets\\images\\blog-img4.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\blog-img5.png",
+      "PackagePath": "staticwebassets\\images\\blog-img5.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\blog-img6.png",
+      "PackagePath": "staticwebassets\\images\\blog-img6.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\employee-working-marketing-setting 1.png",
+      "PackagePath": "staticwebassets\\images\\employee-working-marketing-setting 1.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\hands-holding-smartphone-social-media-concept 1.png",
+      "PackagePath": "staticwebassets\\images\\hands-holding-smartphone-social-media-concept 1.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\image-profile.png",
+      "PackagePath": "staticwebassets\\images\\image-profile.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\image.png",
+      "PackagePath": "staticwebassets\\images\\image.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\image2.png",
+      "PackagePath": "staticwebassets\\images\\image2.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\image3.png",
+      "PackagePath": "staticwebassets\\images\\image3.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\image4.png",
+      "PackagePath": "staticwebassets\\images\\image4.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\logoipsum-311.svg",
+      "PackagePath": "staticwebassets\\images\\logoipsum-311.svg"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\logoipsum-317.svg",
+      "PackagePath": "staticwebassets\\images\\logoipsum-317.svg"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\logoipsum-325.svg",
+      "PackagePath": "staticwebassets\\images\\logoipsum-325.svg"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\logoipsum-342.svg",
+      "PackagePath": "staticwebassets\\images\\logoipsum-342.svg"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\logoipsum-360.svg",
+      "PackagePath": "staticwebassets\\images\\logoipsum-360.svg"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\logoipsum-362.svg",
+      "PackagePath": "staticwebassets\\images\\logoipsum-362.svg"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\logoipsum-367.svg",
+      "PackagePath": "staticwebassets\\images\\logoipsum-367.svg"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\logoipsum-369.svg",
+      "PackagePath": "staticwebassets\\images\\logoipsum-369.svg"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\logoipsum-372 (1).svg",
+      "PackagePath": "staticwebassets\\images\\logoipsum-372 (1).svg"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\people-working-in-front-of-computer-3182763.png",
+      "PackagePath": "staticwebassets\\images\\people-working-in-front-of-computer-3182763.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\people-working-in-front-of-computer-31827631.png",
+      "PackagePath": "staticwebassets\\images\\people-working-in-front-of-computer-31827631.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\people-working-in-front-of-computter-3182763.png",
+      "PackagePath": "staticwebassets\\images\\people-working-in-front-of-computter-3182763.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\profile-pic-1.png",
+      "PackagePath": "staticwebassets\\images\\profile-pic-1.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\profile-pic-2.png",
+      "PackagePath": "staticwebassets\\images\\profile-pic-2.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\team1.png",
+      "PackagePath": "staticwebassets\\images\\team1.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\team2.png",
+      "PackagePath": "staticwebassets\\images\\team2.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\team3.png",
+      "PackagePath": "staticwebassets\\images\\team3.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\images\\team4.png",
+      "PackagePath": "staticwebassets\\images\\team4.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\js\\script.js",
+      "PackagePath": "staticwebassets\\js\\script.js"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Interbuzz-software.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Interbuzz-software.props",
+      "PackagePath": "build\\Interbuzz-software.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Interbuzz-software.props",
+      "PackagePath": "buildMultiTargeting\\Interbuzz-software.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Interbuzz-software.props",
+      "PackagePath": "buildTransitive\\Interbuzz-software.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

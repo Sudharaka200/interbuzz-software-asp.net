@@ -1,0 +1,31 @@
+﻿@model Interbuzz_software.Models.BlogModel
+
+@{
+    ViewData["Title"] = "CreateBlog";
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4">Add Blog</h2>
+    <form asp-action="CreateBlog" method="post" enctype="multipart/form-data">
+        <!-- Blog Image Upload -->
+        <div class="mb-3">
+            <label asp-for="BlogImage" class="form-label">Image</label>
+            <input asp-for="BlogImage" type="file" class="form-control" accept="image/*" />
+        </div>
+
+        <!-- Blog Title -->
+        <div class="mb-3">
+            <label asp-for="Title" class="form-label">Title</label>
+            <input asp-for="Title" type="text" class="form-control" placeholder="Enter blog title" />
+        </div>
+
+        <!-- Blog Description -->
+        <div class="mb-3">
+            <label asp-for="Description" class="form-label">Description</label>
+            <textarea asp-for="Description" class="form-control" rows="4" placeholder="Enter blog description"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

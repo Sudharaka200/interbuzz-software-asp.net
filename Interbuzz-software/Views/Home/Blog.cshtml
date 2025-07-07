@@ -38,117 +38,30 @@
         <div class="row g-4">
 
             <!-- Card 1 -->
-            <div class="col-md-4">
-                <div class="blog-card text-white h-100 ">
-                    <img src="../images/blog-img1.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <small class="text-muted">27 Jan 2021</small>
-                        <h5 class="card-title mt-2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </h5>
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            consectetur
-                            adipiscing sed.
-                        </p>
-                        <a href="../pages/singleblog.html" class="text-decoration-none p1-txt">Read More →</a>
+            @if (Model != null && Model.Any())
+            {
+                foreach (var blog in Model)
+                {
+                    <div class="col-md-4 mb-4">
+                        <div class="card blog-card text-white h-100">
+                            <img src="@(blog.BlogImagePath ?? "/images/blog-img1.png")" class="card-img-top" alt="Blog Image">
+                            <div class="card-body">
+                                <small class="text-muted">@blog.Date.ToString("dd MMM yyyy")</small>
+                                <h5 class="card-title mt-2">@blog.Title</h5>
+                                <p class="card-text">@blog.Description</p>
+                                <a href="#" class="text-decoration-none p1-txt">Read More →</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
+                }
+            }
+            else
+            {
+                <p class="text-muted">No blog posts available.</p>
+            }
 
-            <!-- Repeat for 5 more cards -->
-            <div class="col-md-4">
-                <div class="blog-card text-white h-100 ">
-                    <img src="../images/blog-img2.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <small class="text-muted">27 Jan 2021</small>
-                        <h5 class="card-title mt-2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </h5>
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            consectetur
-                            adipiscing sed.
-                        </p>
-                        <a href="../pages/singleblog.html" class="text-decoration-none p1-txt">Read More →</a>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Add more cards (6 total) -->
-            <div class="col-md-4">
-                <div class="blog-card text-white h-100 ">
-                    <img src="../images/blog-img3.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <small class="text-muted">27 Jan 2021</small>
-                        <h5 class="card-title mt-2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </h5>
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            consectetur
-                            adipiscing sed.
-                        </p>
-                        <a href="../pages/singleblog.html" class="text-decoration-none p1-txt">Read More →</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-
-                <div class="blog-card text-white h-100 ">
-                    <img src="../images/blog-img4.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <small class="text-muted">27 Jan 2021</small>
-                        <h5 class="card-title mt-2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </h5>
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            consectetur
-                            adipiscing sed.
-                        </p>
-                        <a href="../pages/singleblog.html" class="text-decoration-none p1-txt">Read More →</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-
-                <div class="blog-card text-white h-100 ">
-                    <img src="../images/blog-img5.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <small class="text-muted">27 Jan 2021</small>
-                        <h5 class="card-title mt-2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </h5>
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            consectetur
-                            adipiscing sed.
-                        </p>
-                        <a href="../pages/singleblog.html" class="text-decoration-none p1-txt">Read More →</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="blog-card text-white h-100 ">
-                    <img src="../images/blog-img6.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <small class="text-muted">27 Jan 2021</small>
-                        <h5 class="card-title mt-2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </h5>
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            consectetur
-                            adipiscing sed.
-                        </p>
-                        <a href="../pages/singleblog.html" class="text-decoration-none p1-txt">Read More →</a>
-                    </div>
-                </div>
-            </div>
+            
 
         </div>
     </div>

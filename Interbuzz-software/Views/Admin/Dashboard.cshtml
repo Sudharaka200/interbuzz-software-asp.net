@@ -8,57 +8,195 @@
     ViewData["Title"] = "Dashboard";
 }
 
+@model IEnumerable<Interbuzz_software.Models.BlogModel>
 
-@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
 
-<h1>Dashboard</h1>
-<main class="col-md-10 ms-sm-auto col-lg-10 px-md-4">
-    <!-- Navbar -->
-    <nav class="navbar navbar-light bg-white shadow-sm mt-2 mb-4 rounded">
-        <div class="container-fluid">
-            <span class="navbar-brand mb-0 h1">Admin Panel</span>
-        </div>
-    </nav>
+<div class="container">
+    <h1 class="text-center text-white">Dashboard</h1>
 
-    <!-- Dashboard Cards -->
-    <div class="row g-3">
-        <div class="col-md-3">
-            <div class="card text-white bg-primary">
-                <div class="card-body">
-                    <h5 class="card-title">Users</h5>
-                    <p class="card-text">1,024</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card text-white bg-success">
-                <div class="card-body">
-                    <h5 class="card-title">Sales</h5>
-                    <p class="card-text">$12,000</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card text-white bg-warning">
-                <div class="card-body">
-                    <h5 class="card-title">Pending Orders</h5>
-                    <p class="card-text">56</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card text-white bg-danger">
-                <div class="card-body">
-                    <h5 class="card-title">Errors</h5>
-                    <p class="card-text">4</p>
-                </div>
-            </div>
-        </div>
+    <!-- Blog Section -->
+    <div>
+        <h2 class="text-white">Blog</h2>
+        <a asp-action="CreateBlog" class="btn btn-primary">Add New Blog</a>
+        <table class="table text-white">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @if (Model != null && Model.Any())
+                {
+                    foreach (var item in Model)
+                    {
+
+                        <tr>
+                            <th scope="row">@item.Id</th>
+                            <td>
+                                @if (!string.IsNullOrEmpty(item.BlogImagePath))
+                                {
+                                    <img src="@item.BlogImagePath" alt="Blog Image" width="150" />
+                                }
+                                else
+                                {
+                                    <span>No Image</span>
+                                }
+
+                            </td>
+                            <td>@item.Title</td>
+                            <td>@item.Description</td>
+                            <td>@item.Date</td>
+                            <td>
+                                <a asp-action="EditBlog" asp-route-id="@item.Id" class="btn btn-primary">Edit</a>
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                            </td>
+                        </tr>
+                        
+                    }
+                }
+
+            </tbody>
+        </table>
     </div>
+    <!-- Blog Section -->
+    <!-- Our services section -->
+    <div>
+        <h2 class="text-white">Services</h2>
+        <button class="btn btn-primary">Add New Service</button>
+        <table class="table text-white">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Service</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td><img src="../images/Mask%20group.png" alt=""></td>
+                    <td>SEO</td>
+                    <td>Lorem ipsum dolor sit amet, consetetur sadipscing elitr...</td>
+                    <td>
+                        <button class="btn btn-primary">Edit</button>
+                        <button class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
 
-    <!-- Add More Components Below -->
-</main>
-  </div>
+                <tr>
+                    <th scope="row">1</th>
+                    <td><img src="../images/Mask%20group.png" alt=""></td>
+                    <td>SEO</td>
+                    <td>Lorem ipsum dolor sit amet, consetetur sadipscing elitr...</td>
+                    <td>
+                        <button class="btn btn-primary">Edit</button>
+                        <button class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- Our services section -->
 </div>
+
+<!-- Our Projects -->
+<div class="container mt-5">
+    <h2 class="text-white">Projects</h2>
+    <button class="btn btn-primary">Add New Project</button>
+    <table class="table text-white">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Image</th>
+                <th scope="col">Service</th>
+                <th scope="col">Description</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td><img src="../images/1Group%2020.png" class="w-50" alt=""></td>
+                <td>Social Media Marketing2</td>
+                <td>Innovative Branding Initiative</td>
+                <td>
+                    <button class="btn btn-primary">Edit</button>
+                    <button class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+
+            <tr>
+                <th scope="row">1</th>
+                <td><img src="../images/1Group%2020.png" class="w-50" alt=""></td>
+                <td>Social Media Marketing2</td>
+                <td>Innovative Branding Initiative</td>
+                <td>
+                    <button class="btn btn-primary">Edit</button>
+                    <button class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+<!-- Our Projects -->
+<!-- Clients -->
+<div class="container mt-5">
+    <h2 class="text-white">Clients</h2>
+    <button class="btn btn-primary">Add New Comment</button>
+    <table class="table text-white">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Profile Photo</th>
+                <th scope="col">Name</th>
+                <th scope="col">About</th>
+                <th scope="col">Description</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td><img src="../images/profile-pic-1.png" alt=""></td>
+                <td>John Deo</td>
+                <td>Fintech Startup</td>
+                <td>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                    Lorem ipsum dolor sit Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                    nonumy eirmod tempor Lorem ipsum dolor sit
+                </td>
+                <td>
+                    <button class="btn btn-primary mb-2">Edit</button>
+                    <button class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+
+            <tr>
+                <th scope="row">1</th>
+                <td><img src="../images/profile-pic-1.png" alt=""></td>
+                <td>John Deo</td>
+                <td>Fintech Startup</td>
+                <td>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                    Lorem ipsum dolor sit Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                    nonumy eirmod tempor Lorem ipsum dolor sit
+                </td>
+                <td>
+                    <button class="btn btn-primary mb-2">Edit</button>
+                    <button class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+<!-- Clients -->

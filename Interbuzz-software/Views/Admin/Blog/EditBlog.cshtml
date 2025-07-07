@@ -1,0 +1,40 @@
+﻿@model Interbuzz_software.Models.BlogModel
+
+@{
+    ViewData["Title"] = "EditBlog";
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4">Edit Blog</h2>
+
+    <form asp-action="EditBlog" method="post" enctype="multipart/form-data">
+        <input type="hidden" asp-for="Id" />
+
+        <div class="mb-3">
+            <label asp-for="Title" class="form-label">Title</label>
+            <input asp-for="Title" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Description" class="form-label">Description</label>
+            <textarea asp-for="Description" class="form-control"></textarea>
+        </div>
+
+        <!-- Show existing image -->
+        @if (!string.IsNullOrEmpty(Model.BlogImagePath))
+        {
+            <div class="mb-3">
+                <label class="form-label">Current Image:</label><br />
+                <img src="@Model.BlogImagePath" width="150" />
+            </div>
+        }
+
+        <!-- Upload new image -->
+        <div class="mb-3">
+            <label asp-for="BlogImage" class="form-label">Change Image</label>
+            <input asp-for="BlogImage" type="file" class="form-control" accept="image/*" />
+        </div>
+
+        <button type="submit" class="btn btn-success">Update</button>
+    </form>
+</div>

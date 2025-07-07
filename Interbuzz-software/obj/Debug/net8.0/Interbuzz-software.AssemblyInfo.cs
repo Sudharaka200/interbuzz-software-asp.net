@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Interbuzz-software")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+52b0de7d5a0f72c75301e23056ed88cd3bcc1612")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f9116d966623cbc3c43e97abab9dfedeb90e1cd5")]
 [assembly: System.Reflection.AssemblyProductAttribute("Interbuzz-software")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Interbuzz-software")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

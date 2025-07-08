@@ -1,0 +1,33 @@
+﻿@model Interbuzz_software.Models.ServiceModel
+
+@{
+	ViewData["Title"] = "CreateService";
+}
+
+<div class="container mt-5">
+	<h2 class="mb-4">Add Service</h2>
+    <form asp-action="CreateService" method="post" enctype="multipart/form-data">
+        <!-- Blog Image Upload -->
+        <div class="mb-3">
+            <label asp-for="ServiceImg" class="form-label">Image</label>
+            <input asp-for="ServiceImg" type="file" class="form-control" accept="image/*" />
+        </div>
+
+        <!-- Blog Title -->
+        <div class="mb-3">
+            <label asp-for="ServiceTitle" class="form-label">Title</label>
+            <input asp-for="ServiceTitle" type="text" class="form-control" placeholder="Enter blog title" />
+        </div>
+
+        <!-- Blog Description -->
+        <div class="mb-3">
+            <label asp-for="ServiceDescription" class="form-label">Description</label>
+            <textarea asp-for="ServiceDescription" class="form-control" rows="4" placeholder="Enter blog description"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+
+</div>

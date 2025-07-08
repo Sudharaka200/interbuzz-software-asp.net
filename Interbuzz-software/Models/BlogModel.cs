@@ -11,6 +11,5 @@ namespace Interbuzz_software.Models
         public string Description { get; set; }
         public DateOnly Date { get; set; }
 
-
     }
 }

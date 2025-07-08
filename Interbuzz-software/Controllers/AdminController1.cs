@@ -3,12 +3,16 @@ using Microsoft.AspNetCore.Mvc;
 using System.Reflection;
 using System.Reflection.Metadata;
 
+
+
 namespace Interbuzz_software.Controllers
 {
     public class AdminController : Controller
     {
         // ✅ Static in-memory blog storage
         public static List<BlogModel> blogposts = new List<BlogModel>();
+
+        public static List<ServiceModel> serviceModels = new List<ServiceModel>();
 
         // GET: Admin/Login
         [HttpGet]
@@ -32,10 +36,10 @@ namespace Interbuzz_software.Controllers
         }
 
         //View Dashboard
-        public IActionResult Dashboard()
-        {
-            return View(blogModels);
-        }
+        //public IActionResult Dashboard()
+        //{
+        //    return View(blogModels);
+        //}
 
         //Add Blog View
         public IActionResult CreateBlog()
@@ -49,6 +53,7 @@ namespace Interbuzz_software.Controllers
             new BlogModel{ Id = 1, Title = "Test 1", Description = "test2"}
         };
 
+        //Blog
         //Create Blog
         [HttpPost]
         public IActionResult CreateBlog(BlogModel blogModel)
@@ -139,6 +144,114 @@ namespace Interbuzz_software.Controllers
         }
 
 
+
+
+        //Service
+        public IActionResult Dashboard()
+        {
+            var model = new DashboardViewModel
+            {
+                Blogs = blogModels,       // ✅ Already declared
+                Services = serviceModels  // ✅ Use the shared list that stores added services
+            };
+
+            return View(model);
+        }
+
+
+        public IActionResult CreateService()
+        {
+            return View("~/Views/Admin/Services/CreateService.cshtml");
+        }
+
+        [HttpPost]
+        public IActionResult CreateService(ServiceModel serviceModel)
+        {
+            serviceModel.Id = serviceModels.Any() ? serviceModels.Max(f => f.Id) + 1 : 1;
+
+            if (serviceModel.ServiceImg != null && serviceModel.ServiceImg.Length > 0)
+            {
+                var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads");
+
+                if (!Directory.Exists(uploadsFolder))
+                    Directory.CreateDirectory(uploadsFolder);
+
+                var fileName = Path.GetFileName(serviceModel.ServiceImg.FileName);
+                var filePath = Path.Combine(uploadsFolder, fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    serviceModel.ServiceImg.CopyTo(stream);
+                }
+
+                serviceModel.ServiceImgPath = "/uploads/" + fileName;
+            }
+            serviceModels.Add(serviceModel); // ✅ Only once
+            return RedirectToAction("Dashboard");
+        }
+
+        //Edit Service Get id
+        public IActionResult EditService(int id)
+        {
+            var serviceModel = serviceModels.FirstOrDefault(f => f.Id == id);
+            return serviceModel == null
+                ? NotFound()
+                : View("~/Views/Admin/Services/EditService.cshtml", serviceModel);
+        }
+
+
+        //Edit service
+        [HttpPost]
+        public IActionResult EditService(ServiceModel updated)
+        {
+            var serviceModel = serviceModels.FirstOrDefault(r => r.Id == updated.Id);
+            if (serviceModel == null) return NotFound();
+
+            serviceModel.ServiceTitle = updated.ServiceTitle;
+            serviceModel.ServiceDescription = updated.ServiceDescription;
+
+            if (updated.ServiceImg != null && updated.ServiceImg.Length > 0)
+            {
+                var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads");
+
+                if (!Directory.Exists(uploadsFolder))
+                    Directory.CreateDirectory(uploadsFolder);
+
+                var fileName = Path.GetFileName(updated.ServiceImg.FileName);
+                var filePath = Path.Combine(uploadsFolder, fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    updated.ServiceImg.CopyTo(stream);
+                }
+
+                serviceModel.ServiceImgPath = "/uploads/" + fileName;
+            }
+
+            return RedirectToAction("Dashboard");
+        }
+
+
+
+        //Delete Service
+        public IActionResult DeleteService(int id)
+        {
+            var serviceModel = serviceModels.FirstOrDefault(f => f.Id == id);
+            return serviceModel == null ? NotFound() : View("~/Views/Admin/Services/DeleteService.cshtml", serviceModel);
+
+        }
+        //delete
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Route("Admin/Service/ConfirmDelete")]
+        public IActionResult ConfirmServiceDelete(int id)
+        {
+            var serviceModel = serviceModels.FirstOrDefault(f => f.Id == id);
+            if (serviceModel == null) return NotFound();
+
+            serviceModels.Remove(serviceModel);
+            return RedirectToAction("Dashboard");
+        }
 
     }
 }

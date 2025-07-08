@@ -7,9 +7,7 @@
 @{
     ViewData["Title"] = "Dashboard";
 }
-
-@model IEnumerable<Interbuzz_software.Models.BlogModel>
-
+@model Interbuzz_software.Models.DashboardViewModel
 
 <div class="container">
     <h1 class="text-center text-white">Dashboard</h1>
@@ -30,36 +28,33 @@
                 </tr>
             </thead>
             <tbody>
+                        @if (Model.Blogs != null && Model.Blogs.Any())
+                        {
+                            foreach (var item in Model.Blogs)
+                            {
+                                <tr>
+                                    <th scope="row">@item.Id</th>
+                                    <td>
+                                        @if (!string.IsNullOrEmpty(item.BlogImagePath))
+                                        {
+                                            <img src="@item.BlogImagePath" alt="Blog Image" width="150" />
+                                        }
+                                        else
+                                        {
+                                            <span>No Image</span>
+                                        }
+                                    </td>
+                                    <td>@item.Title</td>
+                                    <td>@item.Description</td>
+                                    <td>@item.Date</td>
+                                    <td>
+                                        <a asp-action="EditBlog" asp-route-id="@item.Id" class="btn btn-primary">Edit</a>
+                                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                                    </td>
+                                </tr>
+                            }
+                        }
 
-                @if (Model != null && Model.Any())
-                {
-                    foreach (var item in Model)
-                    {
-
-                        <tr>
-                            <th scope="row">@item.Id</th>
-                            <td>
-                                @if (!string.IsNullOrEmpty(item.BlogImagePath))
-                                {
-                                    <img src="@item.BlogImagePath" alt="Blog Image" width="150" />
-                                }
-                                else
-                                {
-                                    <span>No Image</span>
-                                }
-
-                            </td>
-                            <td>@item.Title</td>
-                            <td>@item.Description</td>
-                            <td>@item.Date</td>
-                            <td>
-                                <a asp-action="EditBlog" asp-route-id="@item.Id" class="btn btn-primary">Edit</a>
-                                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
-                            </td>
-                        </tr>
-                        
-                    }
-                }
 
             </tbody>
         </table>
@@ -68,7 +63,7 @@
     <!-- Our services section -->
     <div>
         <h2 class="text-white">Services</h2>
-        <button class="btn btn-primary">Add New Service</button>
+        <a asp-action="CreateService" class="btn btn-primary">Add New Service</a>
         <table class="table text-white">
             <thead>
                 <tr>
@@ -80,27 +75,29 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td><img src="../images/Mask%20group.png" alt=""></td>
-                    <td>SEO</td>
-                    <td>Lorem ipsum dolor sit amet, consetetur sadipscing elitr...</td>
-                    <td>
-                        <button class="btn btn-primary">Edit</button>
-                        <button class="btn btn-danger">Delete</button>
-                    </td>
-                </tr>
+                @foreach (var item in Model.Services)
+                {
+                    <tr>
+                        <th>@item.Id</th>
+                        <td>
+                            @if (!string.IsNullOrEmpty(item.ServiceImgPath))
+                            {
+                                <img src="@item.ServiceImgPath" alt="Service Image" width="150" />
+                            }
+                            else
+                            {
+                                <span>No Image</span>
+                            }
+                        </td>
+                        <td>@item.ServiceTitle</td>
+                        <td>@item.ServiceDescription</td>
+                        <td>
+                            <a asp-action="EditService" asp-route-id="@item.Id" class="btn btn-primary">Edit</a>
+                            <a asp-action="DeleteService" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                }
 
-                <tr>
-                    <th scope="row">1</th>
-                    <td><img src="../images/Mask%20group.png" alt=""></td>
-                    <td>SEO</td>
-                    <td>Lorem ipsum dolor sit amet, consetetur sadipscing elitr...</td>
-                    <td>
-                        <button class="btn btn-primary">Edit</button>
-                        <button class="btn btn-danger">Delete</button>
-                    </td>
-                </tr>
             </tbody>
         </table>
     </div>

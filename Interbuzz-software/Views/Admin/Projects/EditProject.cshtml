@@ -1,18 +1,24 @@
 ﻿@model Interbuzz_software.Models.ProjectModel
 
 @{
-    ViewData["Title"] = "CreateProject";
+    ViewData["Title"] = "EditProject";
 }
 
 <div class="container mt-5">
     <h2 class="mb-4">Add Blog</h2>
-    <form asp-action="CreateProject" method="post" enctype="multipart/form-data">
+    <form asp-action="EditProject" method="post" enctype="multipart/form-data">
         <!-- Blog Image Upload -->
         <div class="mb-3">
             <label asp-for="ProjectImg" class="form-label">Image</label>
             <input asp-for="ProjectImg" type="file" class="form-control" accept="image/*" />
         </div>
-
+        @if (!string.IsNullOrEmpty(Model.ProjectImgPath))
+        {
+            <div class="mb-3">
+                <label class="form-label">Current Image:</label><br />
+                <img src="@Model.ProjectImgPath" width="150" />
+            </div>
+        }
         <!-- Blog Title -->
         <div class="mb-3">
             <label asp-for="ProjectTitle" class="form-label">Title</label>

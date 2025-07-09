@@ -14,6 +14,8 @@ namespace Interbuzz_software.Controllers
 
         public static List<ServiceModel> serviceModels = new List<ServiceModel>();
 
+        public static List<ProjectModel> projectModels = new List<ProjectModel>();
+
         // GET: Admin/Login
         [HttpGet]
         public IActionResult Login()
@@ -152,7 +154,8 @@ namespace Interbuzz_software.Controllers
             var model = new DashboardViewModel
             {
                 Blogs = blogModels,       // ✅ Already declared
-                Services = serviceModels  // ✅ Use the shared list that stores added services
+                Services = serviceModels,  // ✅ Use the shared list that stores added services
+                Projects = projectModels
             };
 
             return View(model);
@@ -252,6 +255,116 @@ namespace Interbuzz_software.Controllers
             serviceModels.Remove(serviceModel);
             return RedirectToAction("Dashboard");
         }
+
+
+
+
+        //Projects
+        //Create Project View
+        public IActionResult CreateProject()
+        {
+            return View("~/Views/Admin/Projects/CreateProject.cshtml");
+        }
+
+        //Create Project
+        [HttpPost]
+        public IActionResult CreateProject(ProjectModel projectModel)
+        {
+            projectModel.Id = projectModels.Any() ? projectModels.Max(f => f.Id) + 1 : 1;
+
+            if (projectModel.ProjectImg != null && projectModel.ProjectImg.Length > 0)
+            {
+                var uploadFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads");
+
+                if (!Directory.Exists(uploadFolder))
+                    Directory.CreateDirectory(uploadFolder);
+
+                var fileExtension = Path.GetExtension(projectModel.ProjectImg.FileName);
+
+                var safeFileName = Guid.NewGuid().ToString() + fileExtension;
+
+                var filePath = Path.Combine(uploadFolder, safeFileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    projectModel.ProjectImg.CopyTo(stream);
+                }
+
+                projectModel.ProjectImgPath = "/uploads/" + safeFileName;
+            }
+
+            projectModels.Add(projectModel);
+            return RedirectToAction("Dashboard");
+        }
+
+        //Get Projects for Edit
+        public IActionResult EditProject(int id)
+        {
+            var projectModel = projectModels.FirstOrDefault(f => f.Id == id);
+            return projectModel == null
+                ? NotFound()
+                : View("~/Views/Admin/Projects/EditProject.cshtml", projectModel);
+        }
+
+        //Edit Project
+        [HttpPost]
+        public IActionResult EditProject(ProjectModel updated)
+        {
+            var projectModel = projectModels.FirstOrDefault(f => f.Id == updated.Id);
+            if (projectModel == null) return NotFound();
+
+            projectModel.ProjectTitle = updated.ProjectTitle;
+            projectModel.ProjectDescription = updated.ProjectDescription;
+
+            if (updated.ProjectImg != null && updated.ProjectImg.Length > 0)
+            {
+                var uploadFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads");
+
+                if (!Directory.Exists(uploadFolder))
+                    Directory.CreateDirectory(uploadFolder);
+
+                var fileName = Path.GetFileName(updated.ProjectImg.FileName);
+                var filePath = Path.Combine(uploadFolder, fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    updated.ProjectImg.CopyTo(stream);
+                }
+
+                projectModel.ProjectImgPath = "/uploads/" + fileName;
+            }
+
+            return RedirectToAction("Dashboard");
+
+        }
+
+        //Delete Project
+        public IActionResult DeleteProject(int id)
+        {
+            var projectModel = projectModels.FirstOrDefault(f => f.Id == id);
+            return projectModel == null ? NotFound() : View("~/Views/Admin/Projects/DeleteProject.cshtml", projectModel);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Route("Admin/Projects/ConfirmProjectDelete")]
+        public IActionResult ConfirmProjectDelete(int id)
+        {
+            var projectModel = projectModels.FirstOrDefault(f => f.Id == id);
+            if (projectModel == null) return NotFound();
+
+            projectModels.Remove(projectModel);
+            return RedirectToAction("Dashboard");
+        }
+
+
+
+
+
+
+
+
+
 
     }
 }

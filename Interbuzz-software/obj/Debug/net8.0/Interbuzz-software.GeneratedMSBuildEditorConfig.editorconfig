@@ -30,6 +30,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQmxvZ1xFZGl0QmxvZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/Projects/ASP.NET/interbuzz-software-asp.net/Interbuzz-software/Views/Admin/Clients/CreateClient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ2xpZW50c1xDcmVhdGVDbGllbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/Projects/ASP.NET/interbuzz-software-asp.net/Interbuzz-software/Views/Admin/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGFzaGJvYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -40,6 +44,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [F:/Projects/ASP.NET/interbuzz-software-asp.net/Interbuzz-software/Views/Admin/Projects/CreateProject.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUHJvamVjdHNcQ3JlYXRlUHJvamVjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Projects/ASP.NET/interbuzz-software-asp.net/Interbuzz-software/Views/Admin/Projects/DeleteProject.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUHJvamVjdHNcRGVsZXRlUHJvamVjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Projects/ASP.NET/interbuzz-software-asp.net/Interbuzz-software/Views/Admin/Projects/EditProject.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUHJvamVjdHNcRWRpdFByb2plY3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/Projects/ASP.NET/interbuzz-software-asp.net/Interbuzz-software/Views/Admin/Services/CreateService.cshtml]

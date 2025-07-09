@@ -107,7 +107,7 @@
 <!-- Our Projects -->
 <div class="container mt-5">
     <h2 class="text-white">Projects</h2>
-    <button class="btn btn-primary">Add New Project</button>
+    <a asp-action="CreateProject" class="btn btn-primary">Add New Project</a>
     <table class="table text-white">
         <thead>
             <tr>
@@ -119,27 +119,28 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td><img src="../images/1Group%2020.png" class="w-50" alt=""></td>
-                <td>Social Media Marketing2</td>
-                <td>Innovative Branding Initiative</td>
-                <td>
-                    <button class="btn btn-primary">Edit</button>
-                    <button class="btn btn-danger">Delete</button>
-                </td>
-            </tr>
-
-            <tr>
-                <th scope="row">1</th>
-                <td><img src="../images/1Group%2020.png" class="w-50" alt=""></td>
-                <td>Social Media Marketing2</td>
-                <td>Innovative Branding Initiative</td>
-                <td>
-                    <button class="btn btn-primary">Edit</button>
-                    <button class="btn btn-danger">Delete</button>
-                </td>
-            </tr>
+            @foreach (var item in Model.Projects)
+            {
+                <tr>
+                    <th>@item.Id</th>
+                    <td>
+                        @if (!string.IsNullOrEmpty(item.ProjectImgPath))
+                        {
+                            <img src="@item.ProjectImgPath" alt="Service Image" width="150" />
+                        }
+                        else
+                        {
+                            <span>No Image</span>
+                        }
+                    </td>
+                    <td>@item.ProjectTitle</td>
+                    <td>@item.ProjectDescription</td>
+                    <td>
+                        <a asp-action="EditProject" asp-route-id="@item.Id" class="btn btn-primary">Edit</a>
+                        <a asp-action="DeleteProject" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
 
         </tbody>
     </table>

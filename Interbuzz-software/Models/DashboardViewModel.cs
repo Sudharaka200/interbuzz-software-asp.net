@@ -4,5 +4,6 @@
     {
         public IEnumerable<BlogModel> Blogs { get; set; }
         public IEnumerable<ServiceModel> Services { get; set; }
+        public IEnumerable<ProjectModel> Projects { get; set; }
     }
 }

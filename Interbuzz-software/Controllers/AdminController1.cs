@@ -16,6 +16,8 @@ namespace Interbuzz_software.Controllers
 
         public static List<ProjectModel> projectModels = new List<ProjectModel>();
 
+        public static List<ClientModel> clientModels = new List<ClientModel>();
+
         // GET: Admin/Login
         [HttpGet]
         public IActionResult Login()
@@ -153,9 +155,10 @@ namespace Interbuzz_software.Controllers
         {
             var model = new DashboardViewModel
             {
-                Blogs = blogModels,       // ✅ Already declared
-                Services = serviceModels,  // ✅ Use the shared list that stores added services
-                Projects = projectModels
+                Blogs = blogModels,       
+                Services = serviceModels,  
+                Projects = projectModels,
+                Clients = clientModels
             };
 
             return View(model);
@@ -357,6 +360,100 @@ namespace Interbuzz_software.Controllers
             return RedirectToAction("Dashboard");
         }
 
+
+
+
+        //clients
+        //Create Client Comment
+        public IActionResult CreateClient()
+        {
+            return View("~/Views/Admin/Clients/CreateClient.cshtml");
+        }
+
+        //Create
+        [HttpPost]
+        public IActionResult Createclient(ClientModel clientModel)
+        {
+            clientModel.Id = clientModels.Any() ? clientModels.Max(c => c.Id) + 1 : 1;
+
+            if (clientModel.ClientProfile != null && clientModel.ClientProfile.Length > 0)
+            {
+                var uploadFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads");
+
+                if (!Directory.Exists(uploadFolder))
+                    Directory.CreateDirectory(uploadFolder);
+
+                var fileExtention = Path.GetExtension(clientModel.ClientProfile.FileName);
+
+                var safeFileName = Guid.NewGuid().ToString() + fileExtention;
+
+                var filePath = Path.Combine(uploadFolder, safeFileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    clientModel.ClientProfile.CopyTo(stream);
+                }
+
+                clientModel.ClientProfilePath = "/uploads/" + safeFileName;
+            }
+
+            clientModels.Add(clientModel);
+            return RedirectToAction("Dashboard");
+
+        }
+
+
+        //Edit Client
+        public IActionResult EditClient (int id)
+        {
+            var clientModel = clientModels.FirstOrDefault(f => f.Id == id);
+            return clientModel == null
+                ? NotFound()
+                : View("~/Views/Admin/Clients/EditClient.cshtml", clientModel);
+        }
+
+        //Edit Project
+        [HttpPost]
+        public IActionResult EditClient(ClientModel updated)
+        {
+            var clientModel = clientModels.FirstOrDefault(f => f.Id == updated.Id);
+            if (clientModel == null) return NotFound();
+
+            clientModel.ClientName = updated.ClientName;
+            clientModel.ClinetJob = updated.ClinetJob;
+            clientModel.ClientComment = updated.ClientComment;
+
+            if(updated.ClientProfile != null && updated.ClientProfile.Length > 0)
+            {
+                var uploadFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads");
+
+                if (!Directory.Exists(uploadFolder))
+                    Directory.CreateDirectory(uploadFolder);
+
+                var fileName = Path.GetFileName(updated.ClientProfile.FileName);
+                var filePath = Path.Combine(uploadFolder, fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    updated.ClientProfile.CopyTo(stream);
+                }
+                clientModel.ClientProfilePath = "/uploads/" + fileName;
+            }
+            return RedirectToAction("Dashboard");
+
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Route("Admin/Clients/ConfirmClienttDelete")]
+        public IActionResult ConfirmClienttDelete(int id)
+        {
+            var clientModel = clientModels.FirstOrDefault(f => f.Id == id);
+            if (clientModel == null) return NotFound();
+
+            clientModels.Remove(clientModel);
+            return RedirectToAction("Dashboard");
+        }
 
 
 

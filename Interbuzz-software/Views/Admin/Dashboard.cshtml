@@ -149,50 +149,42 @@
 <!-- Clients -->
 <div class="container mt-5">
     <h2 class="text-white">Clients</h2>
-    <button class="btn btn-primary">Add New Comment</button>
+    <a asp-action="CreateClient" class="btn btn-primary">Add New Comment</a>
     <table class="table text-white">
         <thead>
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Profile Photo</th>
                 <th scope="col">Name</th>
-                <th scope="col">About</th>
-                <th scope="col">Description</th>
+                <th scope="col">JOb</th>
+                <th scope="col">Comments</th>
                 <th scope="col">Action</th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td><img src="../images/profile-pic-1.png" alt=""></td>
-                <td>John Deo</td>
-                <td>Fintech Startup</td>
-                <td>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                    Lorem ipsum dolor sit Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                    nonumy eirmod tempor Lorem ipsum dolor sit
-                </td>
-                <td>
-                    <button class="btn btn-primary mb-2">Edit</button>
-                    <button class="btn btn-danger">Delete</button>
-                </td>
-            </tr>
 
-            <tr>
-                <th scope="row">1</th>
-                <td><img src="../images/profile-pic-1.png" alt=""></td>
-                <td>John Deo</td>
-                <td>Fintech Startup</td>
-                <td>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                    Lorem ipsum dolor sit Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                    nonumy eirmod tempor Lorem ipsum dolor sit
-                </td>
-                <td>
-                    <button class="btn btn-primary mb-2">Edit</button>
-                    <button class="btn btn-danger">Delete</button>
-                </td>
-            </tr>
+                @foreach (var item in Model.Clients)
+                {
+                    <tr>
+                        <th scope="row">@item.Id</th>
+                        <td>
+                            @if (!string.IsNullOrEmpty(item.ClientProfilePath))
+                            {
+                                <img src="@item.ClientProfile" alt="ClientProfile" width="150" />
+                            }
+                            else
+                            {
+                                <span>No Profile Image</span>
+                            }
+                        </td>
+                        <td>@item.ClientName</td>
+                        <td>@item.ClinetJob</td>
+                        <td>@item.ClientComment</td>
+                        <td>
+                    <a asp-action="EditClient" asp-route-id="@item.Id" class="btn btn-primary">Edit</a>
+                    <a asp-action="DeleteClient" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                }
 
         </tbody>
     </table>

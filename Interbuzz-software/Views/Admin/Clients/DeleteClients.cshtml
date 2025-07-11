@@ -9,7 +9,7 @@
 
 <p>Are you sure you want to delete the blog titled: <strong>@Model.ClientName</strong>?</p>
 
-<form asp-action="ConfirmClienttDelete" method="post">
+<form asp-action="ConfirmClientsDelete" method="post">
     <input type="hidden" asp-for="Id" />
     <button type="submit" class="btn btn-danger">Yes, Delete</button>
     <a asp-action="Dashboard" class="btn btn-secondary">Cancel</a>

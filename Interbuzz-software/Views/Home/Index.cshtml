@@ -2,6 +2,10 @@
     ViewData["Title"] = "Home";
 }
 
+@model Interbuzz_software.Models.DashboardViewModel
+
+
+
 <!-- home-section -->
 <div class="container ">
     <div class="row">
@@ -125,35 +129,30 @@
             <div class="col-lg-6">
                 <div class="row row-cols-1 row-cols-sm-2 g-3">
                     <div class="col">
-                        <div class="home-services-cards p-3 text-center">
-                            <img src="images/Mask group.png" alt="" class="img-fluid mb-2">
-                            <h2 class="text-c">SEO</h2>
-                            <p class="text-c">Lorem ipsum dolor sit amet, consetetur sadipscing elitr...</p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="home-services-cards p-3 text-center">
-                            <img src="images/Mask group.png" alt="" class="img-fluid mb-2">
-                            <h2 class="text-c">SEO</h2>
-                            <p class="text-c">Lorem ipsum dolor sit amet, consetetur sadipscing elitr...</p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="home-services-cards p-3 text-center">
-                            <img src="images/Mask group.png" alt="" class="img-fluid mb-2">
-                            <h2 class="text-c">SEO</h2>
-                            <p class="text-c">Lorem ipsum dolor sit amet, consetetur sadipscing elitr...</p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="home-services-cards p-3 text-center">
-                            <img src="images/Mask group.png" alt="" class="img-fluid mb-2">
-                            <h2 class="text-c">SEO</h2>
-                            <p class="text-c">Lorem ipsum dolor sit amet, consetetur sadipscing elitr...</p>
-                        </div>
+
+                        @if (Model.Services != null && Model.Services.Any())
+                        {
+                            foreach (var service in Model.Services)
+                            {
+                                <div class="home-services-cards p-3 text-center">
+                                    <img src="@(string.IsNullOrEmpty(service.ServiceImgPath) ? "/image/blog-img1.png" : service.ServiceImgPath)" alt="" class="img-fluid mb-2">
+                                    <h2 class="text-c">@service.ServiceTitle</h2>
+                                    <p class="text-c">@service.ServiceDescription</p>
+                                </div>
+                            }
+                        }
+                        else
+                        {
+                            <div class="col-12">
+                                <p class="text-muted">No services to display</p>
+                            </div>
+                        }
+
+
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
@@ -173,29 +172,21 @@
         </div>
         <div class="container ">
             <div class="row">
-                <div class="col-sm-5 col-md-6 home-projects">
-                    <img src="images/1Group 20.png" alt="" style="width: 100%;">
-                    <p class="home-project-txt-title-c">Social Media Marketing1</p>
-                    <h4 class="text-c home-project-txt-p">Innovative Branding Initiative</h4>
-                </div>
-                <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0 home-projects">
-                    <img src="images/Group 20.png" alt="" style="width: 100%;">
-                    <p class="home-project-txt-title-c">Social Media Marketing2</p>
-                    <h4 class="text-c home-project-txt-p">Innovative Branding Initiative</h4>
-                </div>
+
+                @if (Model.Projects != null && Model.Projects.Any())
+                {
+                    foreach (var project in Model.Projects)
+                    {
+                        <div class="col-sm-5 col-md-6 home-projects">
+                            <img src="@(string.IsNullOrEmpty(project.ProjectImgPath) ? "/image/blog-img1.png" : project.ProjectImgPath)" alt="" style="width: 100%;">
+                            <p class="home-project-txt-title-c">@project.ProjectTitle</p>
+                            <h4 class="text-c home-project-txt-p">@project.ProjectDescription</h4>
+                        </div>
+                    }
+                }
+
             </div>
-            <div class="row">
-                <div class="col-sm-6 col-md-5 col-lg-6 home-projects">
-                    <img src="images/Group 201.png" alt="" style="width: 100%;">
-                    <p class="home-project-txt-title-c">Social Media Marketing3</p>
-                    <h4 class="text-c home-project-txt-p">Innovative Branding Initiative</h4>
-                </div>
-                <div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0 home-projects">
-                    <img src="images/1Group 201.png" alt="" style="width: 100%;">
-                    <p class="home-project-txt-title-c">Social Media Marketing4</p>
-                    <h4 class="text-c home-project-txt-p">Innovative Branding Initiative</h4>
-                </div>
-            </div>
+
             <div class="home-project-section-btn">
                 <button class="main-btn home-all-projects btn-all-projects">View All Projects</button>
             </div>
@@ -216,50 +207,32 @@
         <div class="testimonial-section">
             <div class="swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide testimonial-card">
-                        <p>
-                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem
-                            ipsum dolor sit Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                            eirmod tempor Lorem ipsum dolor sit
-                        </p>
-                        <div class="testimonial-footer">
-                            <img src="images/image-profile.png" alt="User">
-                            <div>
-                                <strong>John Deo</strong><br>
-                                <span>Fintech Startup</span>
+                    
+                    @if (Model.Projects != null && Model.Clients.Any())
+                    {
+                        foreach (var client in Model.Clients)
+                        {
+                            <div class="swiper-slide testimonial-card">
+                                <p>
+                                    @client.ClientComment
+                                </p>
+                                <div class="testimonial-footer">
+                                    <img src="@(string.IsNullOrEmpty(client.ClientProfilePath) ? "images/profile-pic-1.png" : client.ClientProfilePath)" alt="User">
+                                    <div>
+                                        <strong>@client.ClientName</strong><br>
+                                        <span>@client.ClinetJob</span>
+                                    </div>
+                                </div>
                             </div>
+                        }
+                    }
+                    else
+                    {
+                        <div class="col-12">
+                            <p class="text-muted">No Display Clients Comments</p>
                         </div>
-                    </div>
+                    }
 
-                    <div class="swiper-slide testimonial-card">
-                        <p>
-                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem
-                            ipsum dolor sit Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                            eirmod tempor Lorem ipsum dolor sit
-                        </p>
-                        <div class="testimonial-footer">
-                            <img src="images/profile-pic-1.png" alt="User">
-                            <div>
-                                <strong>John Deo</strong><br>
-                                <span>Fintech Startup</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide testimonial-card">
-                        <p>
-                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem
-                            ipsum dolor sit Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                            eirmod tempor Lorem ipsum dolor sit
-                        </p>
-                        <div class="testimonial-footer">
-                            <img src="images/profile-pic-2.png" alt="User">
-                            <div>
-                                <strong>John Deo</strong><br>
-                                <span>Fintech Startup</span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>

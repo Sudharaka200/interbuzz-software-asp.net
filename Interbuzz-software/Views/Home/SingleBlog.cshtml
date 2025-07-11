@@ -1,258 +1,86 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model Interbuzz_software.Models.BlogModel
 
 @{
     ViewData["Title"] = "SingleBlog";
-}
-
-
-@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@if (Model == null)
+{
+    <p class="text-danger text-center py-5">Error: Blog data not found.</p>
+    return;
+}
 
-<!-- sub-Service-section -->
-<div>
-    <div class="container-" style="text-align: center; padding: 120px 0px 120px 0px;">
-        <h1 class="main-title ">
-            Creating a Brand Studious For Startups<br><span class="main-s-txt">
-                Using
-                Artificial Intelligence
-            </span>
-        </h1>
-        <p class="p-second-color banner-padding-res">
-            Lorem ipsum dolor sit amet, consetetur sadipscing
-            elitr, sed diam nonumy
-            eirmod
-            tempor Lorem ipsum dolor sit Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-        </p>
+<!-- Blog Intro -->
+<div class="container text-center py-5">
+    <h1 class="main-title">
+        @Model.Title
+        <br>
+        <span class="main-s-txt">Published on @Model.Date.ToString("dd MMM yyyy")</span>
+    </h1>
+</div>
+
+<!-- Blog Banner Image -->
+<div class="bg-black py-4">
+    <div class="container text-center">
+        <img src="@(string.IsNullOrEmpty(Model.BlogImagePath) ? "/images/default.png" : Model.BlogImagePath)"
+             class="sub-service-banner-img img-fluid" alt="Blog Image">
     </div>
 </div>
-            </div>
-        </div>
-<!-- sub-Service-section -->
-<!-- sub-Service banner -->
-<div class="bg-black">
-    <div class="container">
-        <img src="../images/people-working-in-front-of-computer-31827631.png" class="sub-service-banner-img"
-             alt="">
-    </div>
-</div>
-<!-- sub-Service banner -->
 
-<div class="background-colour-right-top-left-bottom-center background-colour-left-only">
+<!-- Blog Content -->
+<div class="background-colour-right-top-left-bottom-center background-colour-left-only py-5">
     <div class="container">
         <div class="sub-blog-padding">
-            <h2 class="main-title ">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-            <p class="p-second-color">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                in
-                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim
-                veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                irure
-                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                laborum.
-            </p>
-            <br>
-            <h2 class="main-title ">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-            <p class="p-second-color">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                in
-                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim
-                veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                irure
-                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                laborum.
-            </p>
-
-            <ul class="p-second-color">
-                <li class="p-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</li>
-                <li class="p-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</li>
-                <li class="p-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</li>
-            </ul>
-            <p class="p-second-color">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                in
-                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim
-                veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                irure
-                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                laborum.
-            </p>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="content ">
-                        <img src="../images/blog-c-1.jpg" alt="" class="single-blog-img-c">
-                    </div>
-                </div>
-                <div class="col">
-                    <img src="../images/blog-c-2.jpg" alt="" class="single-blog-img-c">
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="sub-blog-padding">
-                <h2 class="main-title ">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-                <p class="p-second-color">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in
-                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                    cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim
-                    veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                    irure
-                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur
-                    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                    laborum.
-                </p>
-                <br>
-                <p class="p-second-color">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in
-                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                    cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim
-                    veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                    irure
-                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur
-                    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                    laborum.
-                </p>
-                <br>
-                <p class="p-second-color">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in
-                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                    cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim
-                    veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                    irure
-                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur
-                    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                    laborum.
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="bg-black">
-        <div class="container py-5">
-
-            <button class="secondary-btn mb-2">Explore Blogs</button>
-            <h2 class="main-title">Explore Related Blogs</h2>
-            <div class="row g-4">
-
-                <!-- Card 1 -->
-                <div class="col-md-4">
-                    <div class="blog-card text-white h-100 ">
-                        <img src="../images/blog-img1.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <small class="text-muted">27 Jan 2021</small>
-                            <h5 class="card-title mt-2">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing
-                                elit.
-                            </h5>
-                            <p class="card-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                consectetur
-                                adipiscing sed.
-                            </p>
-                            <a href="../pages/singleblog.html" class="text-decoration-none p1-txt">Read More →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Repeat for 5 more cards -->
-                <div class="col-md-4">
-                    <div class="blog-card text-white h-100 ">
-                        <img src="../images/blog-img2.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <small class="text-muted">27 Jan 2021</small>
-                            <h5 class="card-title mt-2">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing
-                                elit.
-                            </h5>
-                            <p class="card-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                consectetur
-                                adipiscing sed.
-                            </p>
-                            <a href="../pages/singleblog.html" class="text-decoration-none p1-txt">Read More →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Add more cards (6 total) -->
-                <div class="col-md-4">
-                    <div class="blog-card text-white h-100 ">
-                        <img src="../images/blog-img3.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <small class="text-muted">27 Jan 2021</small>
-                            <h5 class="card-title mt-2">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing
-                                elit.
-                            </h5>
-                            <p class="card-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                consectetur
-                                adipiscing sed.
-                            </p>
-                            <a href="../pages/singleblog.html" class="text-decoration-none p1-txt">Read More →</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <h2 class="main-title">@Model.Title</h2>
+            <p class="p-second-color">@Model.Description</p>
         </div>
     </div>
 </div>
-<!-- area 2 -->
+
+<!-- Related Blogs Section -->
+<div class="bg-black py-5">
+    <div class="container">
+        <button class="secondary-btn mb-3">Explore Blogs</button>
+        <h2 class="main-title mb-4">Explore Related Blogs</h2>
+        <div class="row g-4">
+            @{
+                var relatedBlogs = Interbuzz_software.Controllers.AdminController.blogModels
+                .Where(b => b.Id != Model.Id)
+                .Take(3)
+                .ToList();
+
+                if (relatedBlogs.Any())
+                {
+                    foreach (var related in relatedBlogs)
+                    {
+                        <div class="col-md-4">
+                            <div class="blog-card text-white h-100">
+                                <img src="@(string.IsNullOrEmpty(related.BlogImagePath) ? "/images/default.png" : related.BlogImagePath)" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <small class="text-muted">@related.Date.ToString("dd MMM yyyy")</small>
+                                    <h5 class="card-title mt-2">@related.Title</h5>
+                                    <p class="card-text">
+                                        @related.Description?.Substring(0, Math.Min(100, related.Description.Length))...
+                                    </p>
+                                    <a href="@Url.Action("SingleBlog", "Home", new { id = related.Id })" class="text-decoration-none p1-txt">Read More →</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <p class="text-muted">No related blogs found.</p>
+                }
+            }
+        </div>
     </div>
-<!-- Get Started section -->
-<div class="container-fluid body-home home-last-get-started-section background-colour-top-only">
-    <div class="home-project-section-text home-technology-getstarted">
+</div>
+
+<!-- Get Started Section -->
+<div class="container-fluid body-home home-last-get-started-section background-colour-top-only py-5">
+    <div class="home-project-section-text home-technology-getstarted text-center">
         <h2 class="main-title home-last-get-started-section-title">Innovative Technology For <br> Your Business</h2>
         <p class="p-txt home-last-get-started-section-p p-second-color">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolor
@@ -261,5 +89,3 @@
         <button class="main-btn home-all-projects">View All Projects</button>
     </div>
 </div>
-<!-- Get Started section -->
-<!-- area 3 -->

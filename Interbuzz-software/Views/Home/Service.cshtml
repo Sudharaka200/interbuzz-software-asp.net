@@ -12,6 +12,7 @@
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@model Interbuzz_software.Models.DashboardViewModel
 
 
 <!-- home-section -->
@@ -33,119 +34,59 @@
         </div>
 <!-- home-section -->
 <!-- area 2 -->
-<div>
-    <div class="bg-black our-services-padding">
-        <a href="../pages/subservice.html" style="text-decoration: none;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-6 order-1 order-md-1">
-                        <img src="../images/employee-working-marketing-setting 1.png" alt=""
-                             class="our-services-img">
-                    </div>
-                    <div class="col-12 col-md-6 order-2 order-md-2">
-                        <div class="content services-content-align">
-                            <img src="../images/Mask grou1p.png" alt="">
-                            <h4 class="main-title">SEO</h4>
-                            <p class="p-second-color">
-                                Lorem ipsum dolor sit amet consectetur. Id scelerisque
-                                dictum turpis
-                                suscipit in enim quam. Nunc penatibus et in lectus tincidunt rutrum sit
-                                imperdiet.
-                                Imperdiet risus malesuada mollis at. Tristique at egestas netus accumsan nunc
-                                sed
-                                est. Pellentesque nulla pellentesque pulvinar fringilla. Morbi lectus
-                                suspendisse
-                                eros vitae facilisi aenean erat nibh.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </div>
-
-    <div class="background-colour-right-red-left-red our-services-padding">
-        <div class="container">
-            <div class="row">
-                <!-- TEXT COLUMN: shows first on mobile, second on desktop -->
-                <div class="col-12 col-md-6 order-2 order-md-1">
-                    <div class="content services-content-align">
-                        <img src="../images/Mask group21.png" alt="">
-                        <h4 class="main-title">PPC</h4>
-                        <p class="p-second-color">
-                            Lorem ipsum dolor sit amet consectetur. Id scelerisque dictum
-                            turpis
-                            suscipit in enim quam. Nunc penatibus et in lectus tincidunt rutrum sit imperdiet.
-                            Imperdiet risus malesuada mollis at. Tristique at egestas netus accumsan nunc sed
-                            est. Pellentesque nulla pellentesque pulvinar fringilla. Morbi lectus suspendisse
-                            eros vitae facilisi aenean erat nibh.
-                        </p>
+@if (Model.Services != null && Model.Services.Any())
+{
+    int index = 0;
+    foreach (var service in Model.Services)
+    {
+        var isEven = index % 2 == 0;
+        <div class="@(isEven ? "bg-black our-services-padding" : "background-colour-right-red-left-red our-services-padding")">
+            <a href="@(string.IsNullOrEmpty(service.ServiceImgPath) ? "#" : service.ServiceImgPath)" style="text-decoration: none;">
+                <div class="container">
+                    <div class="row">
+                        @* Even: image left, text right | Odd: text left, image right *@
+                        @if (isEven)
+                        {
+                            <div class="col-12 col-md-6 order-1 order-md-1">
+                                <img src="@(string.IsNullOrEmpty(service.ServiceImgPath) ? "/images/default.png" : service.ServiceImgPath)" alt="" class="our-services-img">
+                            </div>
+                            <div class="col-12 col-md-6 order-2 order-md-2">
+                                <div class="content services-content-align">
+                                    <img src="/images/default-icon.png" alt="">
+                                    <h4 class="main-title">@service.ServiceTitle</h4>
+                                    <p class="p-second-color">@service.ServiceDescription</p>
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="col-12 col-md-6 order-2 order-md-1">
+                                <div class="content services-content-align">
+                                    <img src="/images/default-icon.png" alt="">
+                                    <h4 class="main-title">@service.ServiceTitle</h4>
+                                    <p class="p-second-color">@service.ServiceDescription</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 order-1 order-md-2">
+                                <img src="@(string.IsNullOrEmpty(service.ServiceImgPath) ? "/images/default.png" : service.ServiceImgPath)" alt="" class="our-services-img">
+                            </div>
+                        }
                     </div>
                 </div>
-
-                <!-- IMAGE COLUMN: shows second on mobile, first on desktop -->
-                <div class="col-12 col-md-6 order-1 order-md-2">
-                    <img src="../images/Mask group2.png" alt="" class="our-services-img">
-                </div>
-            </div>
+            </a>
         </div>
+        index++;
+    }
+}
+else
+{
+    <div class="col-12 text-center">
+        <p class="text-muted">No services to display</p>
     </div>
+}
 
-
-    <div class="background-colour-right-red-left-red22 our-services-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-6 order-1 order-md-1">
-                    <img src="../images/hands-holding-smartphone-social-media-concept 1.png" alt=""
-                         class="our-services-img">
-                </div>
-                <div class="col-12 col-md-6 order-2 order-md-">
-                    <div class="content services-content-align">
-                        <img src="../images/Mask group4.png" alt="">
-                        <h4 class="main-title">Social</h4>
-                        <p class="p-second-color">
-                            Lorem ipsum dolor sit amet consectetur. Id scelerisque dictum
-                            turpis
-                            suscipit in enim quam. Nunc penatibus et in lectus tincidunt rutrum sit imperdiet.
-                            Imperdiet risus malesuada mollis at. Tristique at egestas netus accumsan nunc sed
-                            est. Pellentesque nulla pellentesque pulvinar fringilla. Morbi lectus suspendisse
-                            eros vitae facilisi aenean erat nibh.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="background-colour-right-red-left-red our-services-padding">
-        <div class="container">
-            <div class="row">
-                <!-- TEXT COLUMN: shows first on mobile, second on desktop -->
-                <div class="col-12 col-md-6 order-2 order-md-1">
-                    <div class="content services-content-align">
-                        <img src="../images/Mask group21.png" alt="">
-                        <h4 class="main-title">Ai Tools</h4>
-                        <p class="p-second-color">
-                            Lorem ipsum dolor sit amet consectetur. Id scelerisque dictum
-                            turpis
-                            suscipit in enim quam. Nunc penatibus et in lectus tincidunt rutrum sit imperdiet.
-                            Imperdiet risus malesuada mollis at. Tristique at egestas netus accumsan nunc sed
-                            est. Pellentesque nulla pellentesque pulvinar fringilla. Morbi lectus suspendisse
-                            eros vitae facilisi aenean erat nibh.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- IMAGE COLUMN: shows second on mobile, first on desktop -->
-                <div class="col-12 col-md-6 order-1 order-md-2">
-                    <img src="../images/Mask group3.png" alt="" class="our-services-img">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <!-- area 2 -->
-    </div>
+
 
 <!-- Get Started section -->
 <div class="container-fluid body-home home-last-get-started-section background-colour-top-only">

@@ -473,12 +473,36 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\05da6e1a-e15b-45ba-bd3e-a35b80bf5ab4.png",
+      "PackagePath": "staticwebassets\\uploads\\05da6e1a-e15b-45ba-bd3e-a35b80bf5ab4.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\06c1323f-148f-4e3d-aaaf-088f4390ea27.png",
+      "PackagePath": "staticwebassets\\uploads\\06c1323f-148f-4e3d-aaaf-088f4390ea27.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\08aa08e6-6d39-4dca-81ae-19d99a2399a6.png",
+      "PackagePath": "staticwebassets\\uploads\\08aa08e6-6d39-4dca-81ae-19d99a2399a6.png"
+    },
+    {
       "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\09f7dd46-d0f9-460a-a46c-0816d9dc26a7.png",
       "PackagePath": "staticwebassets\\uploads\\09f7dd46-d0f9-460a-a46c-0816d9dc26a7.png"
     },
     {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\0a799878-3c7e-4829-9c25-0a4c971c60a1.png",
+      "PackagePath": "staticwebassets\\uploads\\0a799878-3c7e-4829-9c25-0a4c971c60a1.png"
+    },
+    {
       "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\18061147-ef70-4f89-a0eb-381fd43f881c.png",
       "PackagePath": "staticwebassets\\uploads\\18061147-ef70-4f89-a0eb-381fd43f881c.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\1ac7395e-e289-446e-9ee4-85c17cabd936.png",
+      "PackagePath": "staticwebassets\\uploads\\1ac7395e-e289-446e-9ee4-85c17cabd936.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\2b91a3c1-0480-45e1-97f8-151e3189fec7.png",
+      "PackagePath": "staticwebassets\\uploads\\2b91a3c1-0480-45e1-97f8-151e3189fec7.png"
     },
     {
       "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\2c4be08c-4dca-4280-9f6e-2ead4ed0e526.png",
@@ -489,8 +513,20 @@
       "PackagePath": "staticwebassets\\uploads\\305399cf-4803-466f-944e-c8db1c285a82.png"
     },
     {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\35fac5b2-c829-4680-8dd6-aaa890e02f68.png",
+      "PackagePath": "staticwebassets\\uploads\\35fac5b2-c829-4680-8dd6-aaa890e02f68.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\3a707e43-c486-43b5-b074-3bb4ebd27b60.png",
+      "PackagePath": "staticwebassets\\uploads\\3a707e43-c486-43b5-b074-3bb4ebd27b60.png"
+    },
+    {
       "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\5058fc1b-58db-4554-921c-a8f1667db077.png",
       "PackagePath": "staticwebassets\\uploads\\5058fc1b-58db-4554-921c-a8f1667db077.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\5ad09f0b-45cc-4477-8888-340509a9fe68.png",
+      "PackagePath": "staticwebassets\\uploads\\5ad09f0b-45cc-4477-8888-340509a9fe68.png"
     },
     {
       "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\665e951c-4591-4642-b74b-1fc985ba1c15.png",
@@ -501,8 +537,24 @@
       "PackagePath": "staticwebassets\\uploads\\7c5571bd-3944-448b-a486-29dda9c56e68.png"
     },
     {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\80b7346b-aa6d-4b37-a5fb-7343d19526c7.png",
+      "PackagePath": "staticwebassets\\uploads\\80b7346b-aa6d-4b37-a5fb-7343d19526c7.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\882a6155-398e-47b4-981f-5130e2cad5ca.png",
+      "PackagePath": "staticwebassets\\uploads\\882a6155-398e-47b4-981f-5130e2cad5ca.png"
+    },
+    {
       "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\89f790d8-f5ae-48c3-a145-780b9f568373.png",
       "PackagePath": "staticwebassets\\uploads\\89f790d8-f5ae-48c3-a145-780b9f568373.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\8c99a731-1154-43e3-b54a-035a15a5dc96.png",
+      "PackagePath": "staticwebassets\\uploads\\8c99a731-1154-43e3-b54a-035a15a5dc96.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\91be9465-c38f-4db4-b6cc-854b051df328.png",
+      "PackagePath": "staticwebassets\\uploads\\91be9465-c38f-4db4-b6cc-854b051df328.png"
     },
     {
       "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\9942b9b2-00c6-4289-8594-95ebdfaee6c5.png",
@@ -523,6 +575,22 @@
     {
       "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\Screenshot (1).png",
       "PackagePath": "staticwebassets\\uploads\\Screenshot (1).png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\Screenshot (2).png",
+      "PackagePath": "staticwebassets\\uploads\\Screenshot (2).png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\Screenshot (23).png",
+      "PackagePath": "staticwebassets\\uploads\\Screenshot (23).png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\Screenshot (24).png",
+      "PackagePath": "staticwebassets\\uploads\\Screenshot (24).png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\Screenshot (26).png",
+      "PackagePath": "staticwebassets\\uploads\\Screenshot (26).png"
     },
     {
       "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\Screenshot (43).png",
@@ -549,16 +617,44 @@
       "PackagePath": "staticwebassets\\uploads\\Screenshot 2025-07-08 003733.png"
     },
     {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\a873c274-b42b-43c2-82e6-8a69a69f5845.png",
+      "PackagePath": "staticwebassets\\uploads\\a873c274-b42b-43c2-82e6-8a69a69f5845.png"
+    },
+    {
       "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\b4d501c8-2200-4924-8e16-d664455bace1.png",
       "PackagePath": "staticwebassets\\uploads\\b4d501c8-2200-4924-8e16-d664455bace1.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\b7287344-6e5a-4367-8ac1-c1d501731801.png",
+      "PackagePath": "staticwebassets\\uploads\\b7287344-6e5a-4367-8ac1-c1d501731801.png"
     },
     {
       "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\back-img1.png",
       "PackagePath": "staticwebassets\\uploads\\back-img1.png"
     },
     {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\c6344da2-ccb0-4bd0-a356-6af684987792.png",
+      "PackagePath": "staticwebassets\\uploads\\c6344da2-ccb0-4bd0-a356-6af684987792.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\c7900406-2631-4a88-a547-b6172abb36d1.png",
+      "PackagePath": "staticwebassets\\uploads\\c7900406-2631-4a88-a547-b6172abb36d1.png"
+    },
+    {
       "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\d13e231e-b8fb-4a14-95f3-c9ec62380a29.png",
       "PackagePath": "staticwebassets\\uploads\\d13e231e-b8fb-4a14-95f3-c9ec62380a29.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\d2b3c766-a6b9-4bf8-b8a7-30222c61dfa1.png",
+      "PackagePath": "staticwebassets\\uploads\\d2b3c766-a6b9-4bf8-b8a7-30222c61dfa1.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\ddcaa511-ec95-41a8-890e-67a00976b586.png",
+      "PackagePath": "staticwebassets\\uploads\\ddcaa511-ec95-41a8-890e-67a00976b586.png"
+    },
+    {
+      "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\f5127232-954b-4485-b63a-7227cb11db01.png",
+      "PackagePath": "staticwebassets\\uploads\\f5127232-954b-4485-b63a-7227cb11db01.png"
     },
     {
       "Id": "F:\\Projects\\ASP.NET\\interbuzz-software-asp.net\\Interbuzz-software\\wwwroot\\uploads\\f6f7d1b4-bb24-4a12-a7da-f75c9d06b1b8.png",

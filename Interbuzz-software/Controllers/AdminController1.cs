@@ -443,18 +443,24 @@ namespace Interbuzz_software.Controllers
 
         }
 
+        //Delete Client
+        public IActionResult DeleteClient(int id)
+        {
+            var clientModel = clientModels.FirstOrDefault(f => f.Id == id);
+            return clientModel == null ? NotFound() : View("~/Views/Admin/Clients/DeleteClients.cshtml", clientModel);
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Route("Admin/Clients/ConfirmClienttDelete")]
-        public IActionResult ConfirmClienttDelete(int id)
+        [Route("Admin/Clients/ConfirmClientsDelete")]
+        public IActionResult ConfirmClientsDelete(int id)
         {
             var clientModel = clientModels.FirstOrDefault(f => f.Id == id);
             if (clientModel == null) return NotFound();
 
             clientModels.Remove(clientModel);
-            return RedirectToAction("Dashboard");
+            return RedirectToAction("dashboard");
         }
-
 
 
 

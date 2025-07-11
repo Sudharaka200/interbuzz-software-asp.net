@@ -22,8 +22,18 @@
         <!-- Blog Description -->
         <div class="mb-3">
             <label asp-for="Description" class="form-label">Description</label>
-            <textarea asp-for="Description" class="form-control" rows="4" placeholder="Enter blog description"></textarea>
+            <textarea asp-for="Description" class="form-control" id="richTextEditor" rows="6" placeholder="Enter blog description"></textarea>
         </div>
+
+        <script>
+            tinymce.init({
+                selector: '#richTextEditor',
+                plugins: 'lists link image table code help wordcount',
+                toolbar: 'undo redo | formatselect | bold italic underline | alignleft aligncenter alignright | bullist numlist outdent indent | removeformat | help',
+                menubar: false
+            });
+        </script>
+
 
         <!-- Submit Button -->
         <button type="submit" class="btn btn-primary">Submit</button>

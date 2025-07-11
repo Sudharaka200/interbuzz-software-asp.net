@@ -45,7 +45,7 @@
                                         }
                                     </td>
                                     <td>@item.Title</td>
-                                    <td>@item.Description</td>
+                                    <td>@Html.Raw(item.Description)</td>
                                     <td>@item.Date</td>
                                     <td>
                                         <a asp-action="EditBlog" asp-route-id="@item.Id" class="btn btn-primary">Edit</a>

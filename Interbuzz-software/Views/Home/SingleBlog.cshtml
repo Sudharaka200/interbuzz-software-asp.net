@@ -1,4 +1,5 @@
 ﻿@model Interbuzz_software.Models.BlogModel
+@using System.Text.RegularExpressions
 
 @{
     ViewData["Title"] = "SingleBlog";
@@ -15,7 +16,7 @@
 <div class="container text-center py-5">
     <h1 class="main-title">
         @Model.Title
-        <br>
+        <br />
         <span class="main-s-txt">Published on @Model.Date.ToString("dd MMM yyyy")</span>
     </h1>
 </div>
@@ -24,7 +25,7 @@
 <div class="bg-black py-4">
     <div class="container text-center">
         <img src="@(string.IsNullOrEmpty(Model.BlogImagePath) ? "/images/default.png" : Model.BlogImagePath)"
-             class="sub-service-banner-img img-fluid" alt="Blog Image">
+             class="sub-service-banner-img img-fluid" alt="@Model.Title" />
     </div>
 </div>
 
@@ -33,7 +34,9 @@
     <div class="container">
         <div class="sub-blog-padding">
             <h2 class="main-title">@Model.Title</h2>
-            <p class="p-second-color">@Model.Description</p>
+            <div class="p-second-color">
+                @Html.Raw(Model.Description)
+            </div>
         </div>
     </div>
 </div>
@@ -50,29 +53,43 @@
                 .Take(3)
                 .ToList();
 
-                if (relatedBlogs.Any())
+                string StripHtml(string input)
                 {
-                    foreach (var related in relatedBlogs)
-                    {
-                        <div class="col-md-4">
-                            <div class="blog-card text-white h-100">
-                                <img src="@(string.IsNullOrEmpty(related.BlogImagePath) ? "/images/default.png" : related.BlogImagePath)" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <small class="text-muted">@related.Date.ToString("dd MMM yyyy")</small>
-                                    <h5 class="card-title mt-2">@related.Title</h5>
-                                    <p class="card-text">
-                                        @related.Description?.Substring(0, Math.Min(100, related.Description.Length))...
-                                    </p>
-                                    <a href="@Url.Action("SingleBlog", "Home", new { id = related.Id })" class="text-decoration-none p1-txt">Read More →</a>
-                                </div>
+                    return string.IsNullOrEmpty(input)
+                    ? string.Empty
+                    : Regex.Replace(input, "<.*?>", string.Empty);
+                }
+            }
+
+            @if (relatedBlogs.Any())
+            {
+                foreach (var related in relatedBlogs)
+                {
+                    var cleanText = StripHtml(related.Description);
+                    var shortText = cleanText.Length > 100 ? cleanText.Substring(0, 100) + "..." : cleanText;
+
+                    <div class="col-md-4">
+                        <div class="blog-card text-white h-100">
+                            <img src="@(string.IsNullOrEmpty(related.BlogImagePath) ? "/images/default.png" : related.BlogImagePath)"
+                                 class="card-img-top" alt="@related.Title" />
+                            <div class="card-body">
+                                <small class="text-muted">@related.Date.ToString("dd MMM yyyy")</small>
+                                <h5 class="card-title mt-2">@related.Title</h5>
+                                <p class="card-text">@shortText</p>
+                                <a href="@Url.Action("SingleBlog", "Home", new { id = related.Id })"
+                                   class="text-decoration-none p1-txt">
+                                    Read More →
+                                </a>
                             </div>
                         </div>
-                    }
+                    </div>
                 }
-                else
-                {
+            }
+            else
+            {
+                <div class="col-12">
                     <p class="text-muted">No related blogs found.</p>
-                }
+                </div>
             }
         </div>
     </div>
@@ -81,7 +98,9 @@
 <!-- Get Started Section -->
 <div class="container-fluid body-home home-last-get-started-section background-colour-top-only py-5">
     <div class="home-project-section-text home-technology-getstarted text-center">
-        <h2 class="main-title home-last-get-started-section-title">Innovative Technology For <br> Your Business</h2>
+        <h2 class="main-title home-last-get-started-section-title">
+            Innovative Technology For <br /> Your Business
+        </h2>
         <p class="p-txt home-last-get-started-section-p p-second-color">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolor
             sit Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor

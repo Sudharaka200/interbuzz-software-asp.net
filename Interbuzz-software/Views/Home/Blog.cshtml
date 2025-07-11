@@ -53,7 +53,7 @@
                                     @blog.Title
                                 </h5>
                                 <p class="card-text">
-                                    @blog.Description
+                                    @Html.Raw(blog.Description)
                                 </p>
                                 <a href="@Url.Action("SingleBlog", "Home", new { id = blog.Id })" class="text-decoration-none p1-txt">Read More →</a>
                             </div>

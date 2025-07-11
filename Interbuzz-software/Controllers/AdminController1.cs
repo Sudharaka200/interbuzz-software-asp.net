@@ -1,7 +1,10 @@
 ﻿using Interbuzz_software.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Reflection;
-using System.Reflection.Metadata;
+
+
+using static Ganss.Xss.HtmlSanitizer;
+using AngleSharp.Css.Dom;
+using Ganss.Xss;
 
 
 
@@ -17,6 +20,8 @@ namespace Interbuzz_software.Controllers
         public static List<ProjectModel> projectModels = new List<ProjectModel>();
 
         public static List<ClientModel> clientModels = new List<ClientModel>();
+
+
 
         // GET: Admin/Login
         [HttpGet]
@@ -60,10 +65,10 @@ namespace Interbuzz_software.Controllers
         //Blog
         //Create Blog
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult CreateBlog(BlogModel blogModel)
         {
             blogModel.Id = blogModels.Any() ? blogModels.Max(b => b.Id) + 1 : 1;
-
             blogModel.Date = DateOnly.FromDateTime(DateTime.Now);
 
             if (blogModel.BlogImage != null && blogModel.BlogImage.Length > 0)
@@ -84,9 +89,10 @@ namespace Interbuzz_software.Controllers
                 blogModel.BlogImagePath = "/uploads/" + fileName;
             }
 
-            blogModels.Add(blogModel); // ✅ Only once
+            blogModels.Add(blogModel);
             return RedirectToAction("Dashboard");
         }
+
 
         //Edit Using Id
         //Get edit details

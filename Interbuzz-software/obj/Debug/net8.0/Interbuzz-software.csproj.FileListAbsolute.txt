@@ -29,3 +29,8 @@ F:\Projects\ASP.NET\interbuzz-software-asp.net\Interbuzz-software\obj\Debug\net8
 F:\Projects\ASP.NET\interbuzz-software-asp.net\Interbuzz-software\obj\Debug\net8.0\Interbuzz-software.pdb
 F:\Projects\ASP.NET\interbuzz-software-asp.net\Interbuzz-software\obj\Debug\net8.0\Interbuzz-software.genruntimeconfig.cache
 F:\Projects\ASP.NET\interbuzz-software-asp.net\Interbuzz-software\obj\Debug\net8.0\ref\Interbuzz-software.dll
+F:\Projects\ASP.NET\interbuzz-software-asp.net\Interbuzz-software\obj\Debug\net8.0\Interbuzz-software.csproj.AssemblyReference.cache
+F:\Projects\ASP.NET\interbuzz-software-asp.net\Interbuzz-software\bin\Debug\net8.0\AngleSharp.dll
+F:\Projects\ASP.NET\interbuzz-software-asp.net\Interbuzz-software\bin\Debug\net8.0\AngleSharp.Css.dll
+F:\Projects\ASP.NET\interbuzz-software-asp.net\Interbuzz-software\bin\Debug\net8.0\HtmlSanitizer.dll
+F:\Projects\ASP.NET\interbuzz-software-asp.net\Interbuzz-software\obj\Debug\net8.0\Interbuz.E2BA1F6B.Up2Date

@@ -128,28 +128,27 @@
             <!-- Right Services Grid -->
             <div class="col-lg-6">
                 <div class="row row-cols-1 row-cols-sm-2 g-3">
-                    <div class="col">
 
-                        @if (Model.Services != null && Model.Services.Any())
+                         @if (Model.Services != null && Model.Services.Any())
+                         {
+                             foreach (var service in Model.Services)
                         {
-                            foreach (var service in Model.Services)
-                            {
-                                <div class="home-services-cards p-3 text-center">
-                                    <img src="@(string.IsNullOrEmpty(service.ServiceImgPath) ? "/image/blog-img1.png" : service.ServiceImgPath)" alt="" class="img-fluid mb-2">
-                                    <h2 class="text-c">@service.ServiceTitle</h2>
-                                    <p class="text-c">@service.ServiceDescription</p>
-                                </div>
-                            }
-                        }
-                        else
-                        {
-                            <div class="col-12">
-                                <p class="text-muted">No services to display</p>
+                            <div class="col">
+                                 <div class="home-services-cards p-3 text-center">
+                                     <img src="@(string.IsNullOrEmpty(service.ServiceImgPath) ? "/image/blog-img1.png" : service.ServiceImgPath)" alt="" class="img-fluid mb-2">
+                                     <h2 class="text-c">@service.ServiceTitle</h2>
+                                     <p class="text-c">@service.ServiceDescription</p>
+                                 </div>
                             </div>
-                        }
+                             }
+                         }
+                         else
+                         {
+                             <div class="">
+                                 <p class="text-muted">No services to display</p>
+                             </div>
+                         }
 
-
-                    </div>
                 </div>
             </div>
 

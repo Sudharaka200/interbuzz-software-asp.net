@@ -13,13 +13,13 @@ namespace Interbuzz_software.Controllers
     public class AdminController : Controller
     {
         // ✅ Static in-memory blog storage
-        public static List<BlogModel> blogposts = new List<BlogModel>();
+        //public static List<BlogModel> blogposts = new List<BlogModel>();
 
-        public static List<ServiceModel> serviceModels = new List<ServiceModel>();
+        //public static List<ServiceModel> serviceModels = new List<ServiceModel>();
 
-        public static List<ProjectModel> projectModels = new List<ProjectModel>();
+        //public static List<ProjectModel> projectModels = new List<ProjectModel>();
 
-        public static List<ClientModel> clientModels = new List<ClientModel>();
+        //public static List<ClientModel> clientModels = new List<ClientModel>();
 
 
 
@@ -59,8 +59,41 @@ namespace Interbuzz_software.Controllers
         //Add sample data
         public static List<BlogModel> blogModels = new List<BlogModel>
         {
-            new BlogModel{ Id = 1, Title = "Test 1", Description = "test2"}
+            new BlogModel{ Id = 1, BlogImagePath = "/images/blog-img6.png", Title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."},
+            new BlogModel{ Id = 2, BlogImagePath = "/images/blog-img6.png", Title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."},
+            new BlogModel{ Id = 3, BlogImagePath = "/images/blog-img6.png", Title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."},
+            new BlogModel{ Id = 4, BlogImagePath = "/images/blog-img6.png", Title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."},
+            new BlogModel{ Id = 5, BlogImagePath = "/images/blog-img6.png", Title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."},
+            new BlogModel{ Id = 6, BlogImagePath = "/images/blog-img6.png", Title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."}
         };
+
+        public static List<ServiceModel> serviceModels = new List<ServiceModel>
+        {
+            new ServiceModel{ Id = 1, ServiceTitle = "SEO", ServiceDescription = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr...", ServiceImgPath = "/images/Mask group.png" },
+            new ServiceModel{ Id = 2, ServiceTitle = "SEO", ServiceDescription = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr...", ServiceImgPath = "/images/Mask group.png" },
+            new ServiceModel{ Id = 3, ServiceTitle = "SEO", ServiceDescription = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr...", ServiceImgPath = "/images/Mask group.png" },
+            new ServiceModel{ Id = 4, ServiceTitle = "SEO", ServiceDescription = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr...", ServiceImgPath = "/images/Mask group.png" }
+        };
+
+        public static List<ProjectModel> projectModels = new List<ProjectModel>
+        {
+            new ProjectModel{ Id = 1, ProjectTitle = "Social Media Marketing1", ProjectDescription = "Innovative Branding Initiative", ProjectImgPath = "/images/1Group 20.png" },
+            new ProjectModel{ Id = 2, ProjectTitle = "Social Media Marketing1", ProjectDescription = "Innovative Branding Initiative", ProjectImgPath = "/images/Group 20.png" },
+            new ProjectModel{ Id = 3, ProjectTitle = "Social Media Marketing1", ProjectDescription = "Innovative Branding Initiative", ProjectImgPath = "/images/Group 201.png" },
+            new ProjectModel{ Id = 3, ProjectTitle = "Social Media Marketing1", ProjectDescription = "Innovative Branding Initiative", ProjectImgPath = "/images/1Group 201.png" }
+        };
+
+        public static List<ClientModel> clientModels = new List<ClientModel>
+        {
+            new ClientModel{ Id = 1, ClientName = "John Doe", ClinetJob = "CEO, TechCorp", ClientComment = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolorsit Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor", ClientProfilePath = "/images/image-profile.png" },
+            new ClientModel{ Id = 2, ClientName = "Jane Smith", ClinetJob = "Marketing Head, MarketX", ClientComment = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolorsit Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor", ClientProfilePath = "/images/image-profile.png" },
+            new ClientModel{ Id = 3, ClientName = "Mike Johnson", ClinetJob = "Manager, BuildIt", ClientComment = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolorsit Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor", ClientProfilePath = "/images/image-profile.png" },
+            new ClientModel{ Id = 4, ClientName = "John Doe", ClinetJob = "CEO, TechCorp", ClientComment = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolorsit Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor", ClientProfilePath = "/images/image-profile.png" },
+            new ClientModel{ Id = 5, ClientName = "Jane Smith", ClinetJob = "Marketing Head, MarketX", ClientComment = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolorsit Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor", ClientProfilePath = "/images/image-profile.png" },
+            new ClientModel{ Id = 6, ClientName = "Mike Johnson", ClinetJob = "Manager, BuildIt", ClientComment = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolorsit Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor", ClientProfilePath = "/images/image-profile.png" }
+        };
+
+
 
         //Blog
         //Create Blog

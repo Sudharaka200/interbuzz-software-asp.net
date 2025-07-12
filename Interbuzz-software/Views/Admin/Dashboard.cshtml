@@ -61,6 +61,7 @@
     </div>
     <!-- Blog Section -->
     <!-- Our services section -->
+    <!-- Our services section -->
     <div>
         <h2 class="text-white">Services</h2>
         <a asp-action="CreateService" class="btn btn-primary">Add New Service</a>
@@ -68,7 +69,9 @@
             <thead>
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Image</th>
+                    <th scope="col">Logo</th>
+                    <th scope="col">Background 1</th>
+                    <th scope="col">Background 2</th>
                     <th scope="col">Service</th>
                     <th scope="col">Description</th>
                     <th scope="col">Action</th>
@@ -79,28 +82,58 @@
                 {
                     <tr>
                         <th>@item.Id</th>
+
+                        <!-- Logo Image -->
                         <td>
-                            @if (!string.IsNullOrEmpty(item.ServiceImgPath))
+                            @if (!string.IsNullOrEmpty(item.ServiceImgLogoPath))
                             {
-                                <img src="@item.ServiceImgPath" alt="Service Image" width="150" />
+                                <img src="@item.ServiceImgLogoPath" alt="Logo" width="100" />
                             }
                             else
                             {
-                                <span>No Image</span>
+                                <span>No Logo</span>
                             }
                         </td>
+
+                        <!-- Background Image 1 -->
+                        <td>
+                            @if (!string.IsNullOrEmpty(item.ServicebgImg1Path))
+                            {
+                                <img src="@item.ServicebgImg1Path" alt="Background 1" width="100" />
+                            }
+                            else
+                            {
+                                <span>No Bg 1</span>
+                            }
+                        </td>
+
+                        <!-- Background Image 2 -->
+                        <td>
+                            @if (!string.IsNullOrEmpty(item.ServiceBgImg2Path))
+                            {
+                                <img src="@item.ServiceBgImg2Path" alt="Background 2" width="100" />
+                            }
+                            else
+                            {
+                                <span>No Bg 2</span>
+                            }
+                        </td>
+
+                        <!-- Title & Description -->
                         <td>@item.ServiceTitle</td>
                         <td>@item.ServiceDescription</td>
+
+                        <!-- Actions -->
                         <td>
-                            <a asp-action="EditService" asp-route-id="@item.Id" class="btn btn-primary">Edit</a>
+                            <a asp-action="EditService" asp-route-id="@item.Id" class="btn btn-primary mb-1">Edit</a>
                             <a asp-action="DeleteService" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
                 }
-
             </tbody>
         </table>
     </div>
+
     <!-- Our services section -->
 </div>
 

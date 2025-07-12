@@ -41,18 +41,18 @@
     {
         var isEven = index % 2 == 0;
         <div class="@(isEven ? "bg-black our-services-padding" : "background-colour-right-red-left-red our-services-padding")">
-            <a href="@(string.IsNullOrEmpty(service.ServiceImgPath) ? "#" : service.ServiceImgPath)" style="text-decoration: none;">
+            <a href="@Url.Action("SubService", "Service", new { id = service.Id })" style="text-decoration: none;">
                 <div class="container">
                     <div class="row">
                         @* Even: image left, text right | Odd: text left, image right *@
                         @if (isEven)
                         {
                             <div class="col-12 col-md-6 order-1 order-md-1">
-                                <img src="@(string.IsNullOrEmpty(service.ServiceImgPath) ? "/images/default.png" : service.ServiceImgPath)" alt="" class="our-services-img">
+                                <img src="@(string.IsNullOrEmpty(service.ServicebgImg1Path) ? "/images/default.png" : service.ServicebgImg1Path)" alt="" class="our-services-img">
                             </div>
                             <div class="col-12 col-md-6 order-2 order-md-2">
                                 <div class="content services-content-align">
-                                    <img src="/images/default-icon.png" alt="">
+                                    <img src="@(string.IsNullOrEmpty(service.ServiceImgLogoPath) ? "/images/default.png" : service.ServiceImgLogoPath)" alt="" class="">
                                     <h4 class="main-title">@service.ServiceTitle</h4>
                                     <p class="p-second-color">@service.ServiceDescription</p>
                                 </div>
@@ -62,13 +62,13 @@
                         {
                             <div class="col-12 col-md-6 order-2 order-md-1">
                                 <div class="content services-content-align">
-                                    <img src="/images/default-icon.png" alt="">
+                                    <img src="@(string.IsNullOrEmpty(service.ServiceImgLogoPath) ? "/images/default.png" : service.ServiceImgLogoPath)" alt="" class="">
                                     <h4 class="main-title">@service.ServiceTitle</h4>
                                     <p class="p-second-color">@service.ServiceDescription</p>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 order-1 order-md-2">
-                                <img src="@(string.IsNullOrEmpty(service.ServiceImgPath) ? "/images/default.png" : service.ServiceImgPath)" alt="" class="our-services-img">
+                                <img src="@(string.IsNullOrEmpty(service.ServicebgImg1Path) ? "/images/default.png" : service.ServicebgImg1Path)" alt="" class="our-services-img">
                             </div>
                         }
                     </div>

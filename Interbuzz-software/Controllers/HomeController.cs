@@ -12,12 +12,12 @@ namespace Interbuzz_software.Controllers
         {
             _logger = logger;
         }
-
+         public static List<ServiceModel> serviceModels = new List<ServiceModel>();
         public IActionResult Index()
         {
             var model = new DashboardViewModel
             {
-                Services = AdminController.serviceModels,
+                //Services = AdminController.serviceModels,
                 Projects = AdminController.projectModels,
                 Blogs = AdminController.blogModels,
                 Clients = AdminController.clientModels
@@ -38,10 +38,16 @@ namespace Interbuzz_software.Controllers
         }
 
 
-        public IActionResult About()
+        [Route("Service/SubService/{id}")]
+        public IActionResult SubService(int id)
         {
-            return View(AdminController.blogModels);
+            var service = AdminController.serviceModels.FirstOrDefault(s => s.Id == id);
+            if (service == null)
+                return NotFound();
+
+            return View(service);
         }
+
 
         public IActionResult Service()
         {
@@ -82,5 +88,8 @@ namespace Interbuzz_software.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+       
+
     }
 }

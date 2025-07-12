@@ -1,33 +1,44 @@
 ﻿@model Interbuzz_software.Models.ServiceModel
 
 @{
-	ViewData["Title"] = "CreateService";
+    ViewData["Title"] = "Create Service";
 }
 
 <div class="container mt-5">
-	<h2 class="mb-4">Add Service</h2>
+    <h2 class="mb-4">Add Service</h2>
     <form asp-action="CreateService" method="post" enctype="multipart/form-data">
-        <!-- Blog Image Upload -->
+
+        <!-- Service Logo -->
         <div class="mb-3">
-            <label asp-for="ServiceImg" class="form-label">Image</label>
-            <input asp-for="ServiceImg" type="file" class="form-control" accept="image/*" />
+            <label asp-for="ServiceImgLogo" class="form-label">Service Logo</label>
+            <input asp-for="ServiceImgLogo" type="file" class="form-control" accept="image/*" />
         </div>
 
-        <!-- Blog Title -->
+        <!-- Service Background Image 1 -->
         <div class="mb-3">
-            <label asp-for="ServiceTitle" class="form-label">Title</label>
-            <input asp-for="ServiceTitle" type="text" class="form-control" placeholder="Enter blog title" />
+            <label asp-for="ServiceBgImg1" class="form-label">Background Image 1</label>
+            <input asp-for="ServiceBgImg1" type="file" class="form-control" accept="image/*" />
         </div>
 
-        <!-- Blog Description -->
+        <!-- Service Background Image 2 -->
         <div class="mb-3">
-            <label asp-for="ServiceDescription" class="form-label">Description</label>
-            <textarea asp-for="ServiceDescription" class="form-control" rows="4" placeholder="Enter blog description"></textarea>
+            <label asp-for="ServiceBgimg2" class="form-label">Background Image 2</label>
+            <input asp-for="ServiceBgimg2" type="file" class="form-control" accept="image/*" />
+        </div>
+
+        <!-- Service Title -->
+        <div class="mb-3">
+            <label asp-for="ServiceTitle" class="form-label">Service Title</label>
+            <input asp-for="ServiceTitle" type="text" class="form-control" placeholder="Enter service title" />
+        </div>
+
+        <!-- Service Description -->
+        <div class="mb-3">
+            <label asp-for="ServiceDescription" class="form-label">Service Description</label>
+            <textarea asp-for="ServiceDescription" class="form-control" rows="4" placeholder="Enter service description"></textarea>
         </div>
 
         <!-- Submit Button -->
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-
-
 </div>

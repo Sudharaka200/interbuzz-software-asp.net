@@ -6,7 +6,10 @@ using static Ganss.Xss.HtmlSanitizer;
 using AngleSharp.Css.Dom;
 using Ganss.Xss;
 
-
+//admin Link
+//https://localhost:7252/Admin/Login
+//username: admin@gmail.com
+//password: admin
 
 namespace Interbuzz_software.Controllers
 {
@@ -69,10 +72,10 @@ namespace Interbuzz_software.Controllers
 
         public static List<ServiceModel> serviceModels = new List<ServiceModel>
         {
-            new ServiceModel{ Id = 1, ServiceTitle = "SEO", ServiceDescription = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr...", ServiceImgPath = "/images/Mask group.png" },
-            new ServiceModel{ Id = 2, ServiceTitle = "SEO", ServiceDescription = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr...", ServiceImgPath = "/images/Mask group.png" },
-            new ServiceModel{ Id = 3, ServiceTitle = "SEO", ServiceDescription = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr...", ServiceImgPath = "/images/Mask group.png" },
-            new ServiceModel{ Id = 4, ServiceTitle = "SEO", ServiceDescription = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr...", ServiceImgPath = "/images/Mask group.png" }
+            new ServiceModel{ Id = 1, ServiceTitle = "SEO", ServiceDescription = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr...", ServiceImgLogoPath = "/images/Mask group.png", ServicebgImg1Path = "/images/employee-working-marketing-setting 1.png", ServiceBgImg2Path = "/images/blog-c-2.jpg" },
+            new ServiceModel{ Id = 2, ServiceTitle = "SEO", ServiceDescription = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr...", ServiceImgLogoPath = "/images/Mask group.png", ServicebgImg1Path = "/images/employee-working-marketing-setting 1.png", ServiceBgImg2Path = "/images/blog-c-2.jpg" },
+            new ServiceModel{ Id = 3, ServiceTitle = "SEO", ServiceDescription = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr...", ServiceImgLogoPath = "/images/Mask group.png", ServicebgImg1Path = "/images/employee-working-marketing-setting 1.png", ServiceBgImg2Path = "/images/blog-c-2.jpg" },
+            new ServiceModel{ Id = 4, ServiceTitle = "SEO", ServiceDescription = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr...", ServiceImgLogoPath = "/images/Mask group.png", ServicebgImg1Path = "/images/employee-working-marketing-setting 1.png", ServiceBgImg2Path = "/images/blog-c-2.jpg" }
         };
 
         public static List<ProjectModel> projectModels = new List<ProjectModel>
@@ -214,28 +217,61 @@ namespace Interbuzz_software.Controllers
         {
             serviceModel.Id = serviceModels.Any() ? serviceModels.Max(f => f.Id) + 1 : 1;
 
-            if (serviceModel.ServiceImg != null && serviceModel.ServiceImg.Length > 0)
+            var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads");
+
+            if (!Directory.Exists(uploadsFolder))
+                Directory.CreateDirectory(uploadsFolder);
+
+            // ✅ Save ServiceImgLogo
+            if (serviceModel.ServiceImgLogo != null && serviceModel.ServiceImgLogo.Length > 0)
             {
-                var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads");
-
-                if (!Directory.Exists(uploadsFolder))
-                    Directory.CreateDirectory(uploadsFolder);
-
-                var fileName = Path.GetFileName(serviceModel.ServiceImg.FileName);
+                var fileName = Path.GetFileName(serviceModel.ServiceImgLogo.FileName);
                 var filePath = Path.Combine(uploadsFolder, fileName);
 
                 using (var stream = new FileStream(filePath, FileMode.Create))
                 {
-                    serviceModel.ServiceImg.CopyTo(stream);
+                    serviceModel.ServiceImgLogo.CopyTo(stream);
                 }
 
-                serviceModel.ServiceImgPath = "/uploads/" + fileName;
+                serviceModel.ServiceImgLogoPath = "/uploads/" + fileName;
             }
-            serviceModels.Add(serviceModel); // ✅ Only once
+
+            // ✅ Save ServiceBgImg1
+            if (serviceModel.ServiceBgImg1 != null && serviceModel.ServiceBgImg1.Length > 0)
+            {
+                var fileName = Path.GetFileName(serviceModel.ServiceBgImg1.FileName);
+                var filePath = Path.Combine(uploadsFolder, fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    serviceModel.ServiceBgImg1.CopyTo(stream);
+                }
+
+                serviceModel.ServicebgImg1Path = "/uploads/" + fileName;
+            }
+
+            // ✅ Save ServiceBgimg2
+            if (serviceModel.ServiceBgimg2 != null && serviceModel.ServiceBgimg2.Length > 0)
+            {
+                var fileName = Path.GetFileName(serviceModel.ServiceBgimg2.FileName);
+                var filePath = Path.Combine(uploadsFolder, fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    serviceModel.ServiceBgimg2.CopyTo(stream);
+                }
+
+                serviceModel.ServiceBgImg2Path = "/uploads/" + fileName;
+            }
+
+            // ✅ Finally add to the in-memory list
+            serviceModels.Add(serviceModel);
+
             return RedirectToAction("Dashboard");
         }
 
-        //Edit Service Get id
+
+        // GET Edit Service by Id
         public IActionResult EditService(int id)
         {
             var serviceModel = serviceModels.FirstOrDefault(f => f.Id == id);
@@ -244,37 +280,66 @@ namespace Interbuzz_software.Controllers
                 : View("~/Views/Admin/Services/EditService.cshtml", serviceModel);
         }
 
-
-        //Edit service
+        // POST Edit Service
         [HttpPost]
         public IActionResult EditService(ServiceModel updated)
         {
             var serviceModel = serviceModels.FirstOrDefault(r => r.Id == updated.Id);
             if (serviceModel == null) return NotFound();
 
+            // ✅ Update text fields
             serviceModel.ServiceTitle = updated.ServiceTitle;
             serviceModel.ServiceDescription = updated.ServiceDescription;
 
-            if (updated.ServiceImg != null && updated.ServiceImg.Length > 0)
+            var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads");
+            if (!Directory.Exists(uploadsFolder))
+                Directory.CreateDirectory(uploadsFolder);
+
+            // ✅ Update Service Logo
+            if (updated.ServiceImgLogo != null && updated.ServiceImgLogo.Length > 0)
             {
-                var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads");
-
-                if (!Directory.Exists(uploadsFolder))
-                    Directory.CreateDirectory(uploadsFolder);
-
-                var fileName = Path.GetFileName(updated.ServiceImg.FileName);
+                var fileName = Path.GetFileName(updated.ServiceImgLogo.FileName);
                 var filePath = Path.Combine(uploadsFolder, fileName);
 
                 using (var stream = new FileStream(filePath, FileMode.Create))
                 {
-                    updated.ServiceImg.CopyTo(stream);
+                    updated.ServiceImgLogo.CopyTo(stream);
                 }
 
-                serviceModel.ServiceImgPath = "/uploads/" + fileName;
+                serviceModel.ServiceImgLogoPath = "/uploads/" + fileName;
+            }
+
+            // ✅ Update Service Background Image 1
+            if (updated.ServiceBgImg1 != null && updated.ServiceBgImg1.Length > 0)
+            {
+                var fileName = Path.GetFileName(updated.ServiceBgImg1.FileName);
+                var filePath = Path.Combine(uploadsFolder, fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    updated.ServiceBgImg1.CopyTo(stream);
+                }
+
+                serviceModel.ServicebgImg1Path = "/uploads/" + fileName;
+            }
+
+            // ✅ Update Service Background Image 2
+            if (updated.ServiceBgimg2 != null && updated.ServiceBgimg2.Length > 0)
+            {
+                var fileName = Path.GetFileName(updated.ServiceBgimg2.FileName);
+                var filePath = Path.Combine(uploadsFolder, fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    updated.ServiceBgimg2.CopyTo(stream);
+                }
+
+                serviceModel.ServiceBgImg2Path = "/uploads/" + fileName;
             }
 
             return RedirectToAction("Dashboard");
         }
+
 
 
 

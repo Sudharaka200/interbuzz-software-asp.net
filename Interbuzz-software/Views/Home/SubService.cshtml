@@ -12,7 +12,7 @@
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+@model Interbuzz_software.Models.ServiceModel
 
 <!-- sub-Service-section -->
 <div>
@@ -34,8 +34,14 @@
 <!-- sub-Service banner -->
 <div class="bg-black">
     <div class="container">
-        <img src="../images/people-working-in-front-of-computer-3182763.png" class=" desktop-res-img" alt="desktop">
-        <img src="../images/employee-working-marketing-setting 1.png" class=" mobile-res-img" alt="mobile">
+        @if (!string.IsNullOrEmpty(Model.ServicebgImg1Path))
+        {
+            <img src="@Model.ServicebgImg1Path" class="img-fluid sub-services-img-second" alt="Service Image">
+        }
+        else
+        {
+            <span>No Image Available</span>
+        }
     </div>
 </div>
 <!-- sub-Service banner -->
@@ -48,26 +54,26 @@
         <div class="container">
             <div class="row align-items-center">
                 <!-- Text Section -->
-                <div class="col-12 col-md-8 ">
+                <div class="col-12 col-md-8">
                     <div class="txt-left-service py-5">
                         <button class="secondary-btn">Our Services</button>
-                        <h4 class="main-title">How SEO-Optimized</h4>
+                        <h4 class="main-title">@Model.ServiceTitle</h4>
                         <p class="p-second-color">
-                            Lorem ipsum dolor sit amet consectetur. Porttitor in montes adipiscing egestas. Cras
-                            ligula amet
-                            lectus a et varius. Placerat sapien erat tristique adipiscing egestas eu ullamcorper duis. Lorem
-                            lacus aenean vivamus purus in fusce. Etiam at orci duis elementum in nibh convallis et
-                            scelerisque. Velit ornare ipsum consectetur aliquet ut accumsan molestie lectus. Porta id a a
-                            amet vitae ultrices sit eu at. Lacus platea risus risus diam hendrerit quis etiam elementum.
-                            Fringilla amet aliquet sit elementum eget rutrum tincidunt sit. Mi in scelerisque scelerisque
-                            commodo. Pharetra integer sagittis viverra ultrices placerat turpis condimentum.
+                            @Model.ServiceDescription
                         </p>
                     </div>
                 </div>
 
                 <!-- Image Section -->
                 <div class="col-12 col-md-4">
-                    <img src="../images/Mask group6.png" class="img-fluid sub-services-img-second" alt="Service Image">
+                    @if (!string.IsNullOrEmpty(Model.ServiceImgLogoPath))
+                    {
+                        <img src="@Model.ServiceBgImg2Path" class="img-fluid sub-services-img-second" alt="Service Image">
+                    }
+                    else
+                    {
+                        <span>No Image Available</span>
+                    }
                 </div>
             </div>
         </div>

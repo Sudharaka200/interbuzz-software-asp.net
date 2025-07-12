@@ -5,24 +5,24 @@
 }
 
 <div class="container mt-5">
-    <h2 class="mb-4">Add Blog</h2>
+    <h2 class="mb-4 text-white">Add Blog</h2>
     <form asp-action="CreateProject" method="post" enctype="multipart/form-data">
         <!-- Blog Image Upload -->
         <div class="mb-3">
-            <label asp-for="ProjectImg" class="form-label">Image</label>
+            <label asp-for="ProjectImg" class="form-label text-white">Image</label>
             <input asp-for="ProjectImg" type="file" class="form-control" accept="image/*" />
         </div>
 
         <!-- Blog Title -->
         <div class="mb-3">
-            <label asp-for="ProjectTitle" class="form-label">Title</label>
-            <input asp-for="ProjectTitle" type="text" class="form-control" placeholder="Enter blog title" />
+            <label asp-for="ProjectTitle" class="form-label text-white">Title</label>
+            <input asp-for="ProjectTitle" type="text" class="form-control" placeholder="Enter title" />
         </div>
 
         <!-- Blog Description -->
         <div class="mb-3">
-            <label asp-for="ProjectDescription" class="form-label">Description</label>
-            <textarea asp-for="ProjectDescription" class="form-control" rows="4" placeholder="Enter blog description"></textarea>
+            <label asp-for="ProjectDescription" class="form-label text-white">Description</label>
+            <textarea asp-for="ProjectDescription" class="form-control" rows="4" placeholder="Enter  description"></textarea>
         </div>
 
         <!-- Submit Button -->

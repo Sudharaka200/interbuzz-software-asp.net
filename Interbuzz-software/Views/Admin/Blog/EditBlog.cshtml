@@ -5,18 +5,18 @@
 }
 
 <div class="container mt-5">
-    <h2 class="mb-4">Edit Blog</h2>
+    <h2 class="mb-4 text-white">Edit Blog</h2>
 
     <form asp-action="EditBlog" method="post" enctype="multipart/form-data">
         <input type="hidden" asp-for="Id" />
 
         <div class="mb-3">
-            <label asp-for="Title" class="form-label">Title</label>
+            <label asp-for="Title" class="form-label text-white">Title</label>
             <input asp-for="Title" class="form-control" />
         </div>
 
         <div class="mb-3">
-            <label asp-for="Description" class="form-label">Description</label>
+            <label asp-for="Description" class="form-label text-white">Description</label>
             <textarea asp-for="Description" class="form-control"></textarea>
         </div>
 
@@ -24,7 +24,7 @@
         @if (!string.IsNullOrEmpty(Model.BlogImagePath))
         {
             <div class="mb-3">
-                <label class="form-label">Current Image:</label><br />
+                <label class="form-label text-white">Current Image:</label><br />
                 <img src="@Model.BlogImagePath" width="150" />
             </div>
         }

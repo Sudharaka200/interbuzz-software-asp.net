@@ -5,58 +5,60 @@
 }
 
 <div class="container mt-5">
-    <h2 class="mb-4">Edit Service</h2>
+    <h2 class="mb-4 text-white">Edit Service</h2>
     <form asp-action="EditService" method="post" enctype="multipart/form-data">
         <input type="hidden" asp-for="Id" />
 
         <!-- Service Logo -->
         <div class="mb-3">
-            <label asp-for="ServiceImgLogo" class="form-label">Service Logo</label>
+            <label asp-for="ServiceImgLogo" class="form-label text-white">Service Logo</label>
             <input asp-for="ServiceImgLogo" type="file" class="form-control" accept="image/*" />
         </div>
         @if (!string.IsNullOrEmpty(Model.ServiceImgLogoPath))
         {
             <div class="mb-3">
-                <label class="form-label">Current Logo:</label><br />
+                <label class="form-label text-white">Current Logo:</label><br />
                 <img src="@Model.ServiceImgLogoPath" width="150" />
             </div>
         }
 
         <!-- Background Image 1 -->
         <div class="mb-3">
-            <label asp-for="ServiceBgImg1" class="form-label">Background Image 1</label>
+            <label asp-for="ServiceBgImg1" class="form-label  text-white">Background Image 1</label>
             <input asp-for="ServiceBgImg1" type="file" class="form-control" accept="image/*" />
         </div>
         @if (!string.IsNullOrEmpty(Model.ServicebgImg1Path))
         {
             <div class="mb-3">
-                <label class="form-label">Current Background Image 1:</label><br />
+                <label class="form-label text-white">Current Background Image 1:</label><br />
                 <img src="@Model.ServicebgImg1Path" width="150" />
             </div>
         }
 
         <!-- Background Image 2 -->
         <div class="mb-3">
-            <label asp-for="ServiceBgimg2" class="form-label">Background Image 2</label>
+            <label asp-for="ServiceBgimg2" class="form-label text-white">Background Image 2</label>
             <input asp-for="ServiceBgimg2" type="file" class="form-control" accept="image/*" />
         </div>
         @if (!string.IsNullOrEmpty(Model.ServiceBgImg2Path))
         {
             <div class="mb-3">
-                <label class="form-label">Current Background Image 2:</label><br />
+                <label class="form-label text-white">Current Background Image 2:</label><br />
                 <img src="@Model.ServiceBgImg2Path" width="150" />
             </div>
         }
 
         <!-- Title -->
         <div class="mb-3">
-            <label asp-for="ServiceTitle" class="form-label">Service Title</label>
+            <div class="mb-3">
+                text-white
+                <label asp-for="ServiceTitle" class="form-label ">Service Title</label>
             <input asp-for="ServiceTitle" type="text" class="form-control" placeholder="Enter service title" />
         </div>
 
         <!-- Description -->
         <div class="mb-3">
-            <label asp-for="ServiceDescription" class="form-label">Service Description</label>
+                <label asp-for="ServiceDescription" class="form-label text-white">Service Description</label>
             <textarea asp-for="ServiceDescription" class="form-control" rows="4" placeholder="Enter service description"></textarea>
         </div>
 

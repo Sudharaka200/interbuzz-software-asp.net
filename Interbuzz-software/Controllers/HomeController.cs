@@ -17,7 +17,7 @@ namespace Interbuzz_software.Controllers
         {
             var model = new DashboardViewModel
             {
-                //Services = AdminController.serviceModels,
+                Services = AdminController.serviceModels,
                 Projects = AdminController.projectModels,
                 Blogs = AdminController.blogModels,
                 Clients = AdminController.clientModels
@@ -61,6 +61,11 @@ namespace Interbuzz_software.Controllers
         public IActionResult Blog()
         {
             return View(AdminController.blogModels); // Pass only the list
+        }
+
+        public IActionResult About()
+        {
+            return View();
         }
 
         public IActionResult Projects()

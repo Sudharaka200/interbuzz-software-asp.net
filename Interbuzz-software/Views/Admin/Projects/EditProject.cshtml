@@ -5,29 +5,29 @@
 }
 
 <div class="container mt-5">
-    <h2 class="mb-4">Add Blog</h2>
+    <h2 class="mb-4 text-white">Edit Blog</h2>
     <form asp-action="EditProject" method="post" enctype="multipart/form-data">
         <!-- Blog Image Upload -->
         <div class="mb-3">
-            <label asp-for="ProjectImg" class="form-label">Image</label>
+            <label asp-for="ProjectImg" class="form-label text-white">Image</label>
             <input asp-for="ProjectImg" type="file" class="form-control" accept="image/*" />
         </div>
         @if (!string.IsNullOrEmpty(Model.ProjectImgPath))
         {
             <div class="mb-3">
-                <label class="form-label">Current Image:</label><br />
+                <label class="form-label text-white">Current Image:</label><br />
                 <img src="@Model.ProjectImgPath" width="150" />
             </div>
         }
         <!-- Blog Title -->
         <div class="mb-3">
-            <label asp-for="ProjectTitle" class="form-label">Title</label>
+            <label asp-for="ProjectTitle" class="form-label text-white">Title</label>
             <input asp-for="ProjectTitle" type="text" class="form-control" placeholder="Enter blog title" />
         </div>
 
         <!-- Blog Description -->
         <div class="mb-3">
-            <label asp-for="ProjectDescription" class="form-label">Description</label>
+            <label asp-for="ProjectDescription" class="form-label text-white">Description</label>
             <textarea asp-for="ProjectDescription" class="form-control" rows="4" placeholder="Enter blog description"></textarea>
         </div>
 

@@ -5,8 +5,8 @@
 }
 @model Interbuzz_software.Models.ServiceModel
 
-<h2>Confirm Delete</h2>
-<p>Are you sure you want to delete the blog titled: <strong>@Model.ServiceTitle</strong>?</p>
+<h2 class="text-white">Confirm Delete</h2>
+<p class="text-white">Are you sure you want to delete the blog titled: <strong>@Model.ServiceTitle</strong>?</p>
 
 <form asp-action="ConfirmServiceDelete" method="post">
     <input type="hidden" asp-for="Id" />
